@@ -9,10 +9,15 @@
 	
 	<div>
 		<h1>Books</h1>
+			<div id="popup" style="display: none">some text here</div>
 			<img id="devilwhitecity" src="devilwhitecity.jpg" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
+			<div id="popup" style="display: none">some text here</div>
 			<img id="whiteteeth" src="whiteteeth.jpg" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
+			<div id="popup" style="display: none">some text here</div>
 			<img id="alchemist" src="alchemist.jpg" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
+			<div id="popup" style="display: none">some text here</div>
 			<img id="poorec" src="poorec.jpg" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
+			<div id="popup" style="display: none">some text here</div>
 			<img id="oxygen" src="oxygen.jpg" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
 			<p style="clear: both;">
 	</div>
@@ -27,7 +32,39 @@
 </html>
 
 <script>
-var e = document.getElementById('parent');
+var e = document.getElementById('devilwhitecity');
+e.onmouseover = function() {
+  document.getElementById('popup').style.display = 'block';
+}
+e.onmouseout = function() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+var e = document.getElementById('whiteteeth');
+e.onmouseover = function() {
+  document.getElementById('popup').style.display = 'block';
+}
+e.onmouseout = function() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+var e = document.getElementById('alchemist');
+e.onmouseover = function() {
+  document.getElementById('popup').style.display = 'block';
+}
+e.onmouseout = function() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+var e = document.getElementById('poorec');
+e.onmouseover = function() {
+  document.getElementById('popup').style.display = 'block';
+}
+e.onmouseout = function() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+var e = document.getElementById('oxygen');
 e.onmouseover = function() {
   document.getElementById('popup').style.display = 'block';
 }
