@@ -1,8 +1,10 @@
 body {
-	background-color: orange;
+	background-color: lightgray;
+	font-family: Calibri;
 }
 h1 {
 	color: blue;
+	text-align: center;
 }
 p {
 	color: purple;
