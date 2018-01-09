@@ -11,12 +11,16 @@
 		<h1>Books</h1>
 			<div id="popup" style="display: none">some text here</div>
 			<img id="devilwhitecity" src="devilwhitecity.jpg" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
+			
 			<div id="popup" style="display: none">some text here</div>
 			<img id="whiteteeth" src="whiteteeth.jpg" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
+			
 			<div id="popup" style="display: none">some text here</div>
 			<img id="alchemist" src="alchemist.jpg" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
+			
 			<div id="popup" style="display: none">some text here</div>
 			<img id="poorec" src="poorec.jpg" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
+			
 			<div id="popup" style="display: none">some text here</div>
 			<img id="oxygen" src="oxygen.jpg" style="float: left; width: 20%; margin-right: 1%; margin-bottom: 0.5em;">
 			<p style="clear: both;">
@@ -35,38 +39,43 @@
 var e = document.getElementById('devilwhitecity');
 e.onmouseover = function() {
   document.getElementById('popup').style.display = 'block';
+  document.getElementById('devilwhitecity').style.display = 'none';
 }
 e.onmouseout = function() {
   document.getElementById('popup').style.display = 'none';
 }
 
-var e = document.getElementById('whiteteeth');
+var f = document.getElementById('whiteteeth');
 e.onmouseover = function() {
   document.getElementById('popup').style.display = 'block';
+  document.getElementById('whiteteeth').style.display = 'none';
+}	
+e.onmouseout = function() {
+  document.getElementById('popup').style.display = 'none';
+}
+
+var g = document.getElementById('alchemist');
+e.onmouseover = function() {
+  document.getElementById('popup').style.display = 'block';
+  document.getElementById('alchemist').style.display = 'none';
 }
 e.onmouseout = function() {
   document.getElementById('popup').style.display = 'none';
 }
 
-var e = document.getElementById('alchemist');
+var h = document.getElementById('poorec');
 e.onmouseover = function() {
   document.getElementById('popup').style.display = 'block';
+  document.getElementById('poorec').style.display = 'none';
 }
 e.onmouseout = function() {
   document.getElementById('popup').style.display = 'none';
 }
 
-var e = document.getElementById('poorec');
+var i = document.getElementById('oxygen');
 e.onmouseover = function() {
   document.getElementById('popup').style.display = 'block';
-}
-e.onmouseout = function() {
-  document.getElementById('popup').style.display = 'none';
-}
-
-var e = document.getElementById('oxygen');
-e.onmouseover = function() {
-  document.getElementById('popup').style.display = 'block';
+  document.getElementById('oxygen').style.display = 'none';
 }
 e.onmouseout = function() {
   document.getElementById('popup').style.display = 'none';
