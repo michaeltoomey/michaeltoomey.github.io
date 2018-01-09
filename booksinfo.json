@@ -1,54 +1,101 @@
-{
-	"id": "whiteteeth",
-	info: [
-		{
-	"bookname": "White Teeth",
-	"author": "Zadie Smith",
-	"year-published": 1999,
-	"genre": "Fiction, Novel",
-	"review": "Zadie Smith writes an excellent debut novel, with detailed characterizations that succinctly paint her actors. She masterfully interweaves their lives, and allows them to grow in fantastic and sometimes fanatical ways. Definitely include this book on a future."
-		}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-[
-	{
-		"id": "devilwhitecity",
-		"bookname": "Devil in the White City",
-		"author": "Erik Larson",
-		"year-published": 2003,
-		"genre": "History, True Crime",
-		"review": "A wonderful book that will leave any Chicagoan with much civic pride. It was incredibly interesting to see how the actions of men more than 100 years ago affect the city today. Absolutely entertaining and Erik Larson's style of writing never ceased to amuse me. He made this historical non-fiction read like a novel."
-	},
-	{
-		"id": "whiteteeth",
-		"bookname": "White Teeth",
-		"author": "Zadie Smith",
-		"year-published": 1999,
-		"genre": "Fiction, Novel",
-		"review": "Zadie Smith writes an excellent debut novel, with detailed characterizations that succinctly paint her actors. She masterfully interweaves their lives, and allows them to grow in fantastic and sometimes fanatical ways. Definitely include this book on a future."
-	},
-	{
-		"id": "alchemist",
-		"bookname": "The Alchemist",
-		"author": "Paul Coelho",
-		"year-published": 1988,
-		"genre": "Fiction",
-		"review": "The Alchemist is simultaneously heartwarming and inspiring. Coelho's ideas about the interconnectedness of all things speak to a love for life and its mysteries. Nothing, to him, is unknowable. He also constantly advocates chasing your dreams, and that it is possible to follow your heart and have no need to fear, that it is in fact one's purpose in life to do so. His words are inspiring, and his prose is thoroughly enjoyable."
-	},
-	{
-		"id": "poorec",
-		"bookname": "Poor Economics",
-		"author": "Esther Duflo and Abhijit Banerjee",
-		"year-published": 2011,
-		"genre": "Popular Science, Economics",
-		"review": "Banerjee and Duflo provide a convincing argument for the notion of evidence-based poverty-fighting techniques. They take a scientific perspective on global poverty. I would have liked to see more statistical evidence, rather simple comparisons of means, as well as more discussion of methods and sample sizes. There is a perception that the softer sciences have a reputation for poor statistical power, and the authors did little to dispel this notion. In addition, there is something that seems somewhat morally off about subjecting groups of individuals in impoverished foreign countries to randomized experiments (in this case, to different external aid “treatments”) without their consent, a concept Banerjee and Duflo never discussed. Nevertheless, they often made convincing arguments about the efficacy of different ideas enacted in the past to fight poverty, and have provided a useful framework through which one can examine the issues discussed."
-	},
-	{
-		"id": "oxygen",
-		"bookname": "Oxygen",
-		"author": "Nick Lane",
-		"year-published": 2002,
-		"genre": "Popular Science, Chemistry and Biology",
-		"review": "While "Oxygen" was an enjoyable book, its framing and the author's style were strange. Lane seemed to be attempting to convince readers that oxygen is the foremost concern they should have regarding aging and disease. While the arguments and theories he presents are certainly plausible, I did not find myself entirely convinced. He often seemed to be extrapolating into claims he could not defend with solid evidence, though he was rather frank about that fact. While I in no way doubt molecular oxygen's relevance to human health and disease, I do not think I completely believe his ideas and the subsequent weight he gives to its explanatory power. In addition, Lane possessed a strange way of articulating himself, often using odd analogies to present concepts from molecular or evolutionary biology that were distracting and, at times, inappropriate or misconceived. He tried both to reach a common audience, as well as explain detailed information to people with relevant backgrounds. At times, however, it felt as though he was only doing one or the other. However, his historical account of oxygen on Earth was enthralling and incredibly informative. If I revisit the book in the future, I would certainly re-read his history, and perhaps skip the second half of the text."
-	}
-]
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<h2>Modal Example</h2>
+
+<!-- Trigger/Open The Modal -->
+<input id="btn" type="image" src="bookimages/devilwhitecity.jpg" onclick="alert_hi(this)" value="devilwhitecity" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;"/>
+<input id="btn" type="image" src="bookimages/whiteteeth.jpg" onclick="alert_hi(this)" value="whiteteeth" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;"/>
+<input id="btn" type="image" src="bookimages/alchemist.jpg" onclick="alert_hi(this)" value="alchemist" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;"/>
+<input id="btn" type="image" src="bookimages/poorec.jpg" onclick="alert_hi(this)" value="poorec" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;"/>
+<input id="btn" type="image" src="bookimages/oxygen.jpg" onclick="alert_hi(this)" value="oxygen" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;"/>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn =  document.getElementById("btn");
+function alert_hi(elem) {
+	modal.style.display = "block";
+	btn = document.getElementByValue("elem.value");
+	btn.click();
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

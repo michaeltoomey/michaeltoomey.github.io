@@ -42,19 +42,16 @@
 }
 </style>
 </head>
-
 <body>
 
-<h1>Booksenses2</h1>
+<h2>Modal Example</h2>
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
-<INPUT name="dispinfo" onclick="assignButton(this)" id="green" type="image" src="bookimages/devilwhitecity.jpg" value="devilwhitecity" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
-<INPUT name="dispinfo" onclick="assignButton(this)" id="whiteteeth" type="image" src="bookimages/whiteteeth.jpg" value="whiteteeth" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
-<INPUT name="dispinfo" onclick="assignButton(this)" id="alchemist" type="image" src="bookimages/alchemist.jpg" value="alchemist" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
-<INPUT name="dispinfo" onclick="assignButton(this)" id="poorec" type="image" src="bookimages/poorec.jpg" value="poorec" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
-<INPUT name="dispinfo" onclick="assignButton(this)" id="oxygen" type="image" src="bookimages/oxygen.jpg" value="oxygen" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
-
+<input id="btn" type="image" src="bookimages/devilwhitecity.jpg" onclick="alert_hi(this)" value="devilwhitecity" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;"/>
+<input id="btn" type="image" src="bookimages/whiteteeth.jpg" onclick="alert_hi(this)" value="whiteteeth" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;"/>
+<input id="btn" type="image" src="bookimages/alchemist.jpg" onclick="alert_hi(this)" value="alchemist" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;"/>
+<input id="btn" type="image" src="bookimages/poorec.jpg" onclick="alert_hi(this)" value="poorec" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;"/>
+<input id="btn" type="image" src="bookimages/oxygen.jpg" onclick="alert_hi(this)" value="oxygen" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;"/>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -69,15 +66,20 @@
 
 <script>
 // Get the modal
-var modal = document.getElementById("myModal");
+var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = getElementById("myBtn")
+var btn =  document.getElementById("btn");
+function alert_hi(elem) {
+	modal.style.display = "block";
+	btn = document.getElementByValue("elem.value");
+	btn.click();
+}
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
+// When the user clicks the button, open the modal 
 btn.onclick = function() {
     modal.style.display = "block";
 }

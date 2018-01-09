@@ -1,90 +1,102 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<link rel="stylesheet" href="styles.css">
-<head>
+<style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
 
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+</head>
 <body>
-	
-	<h1>Booksens</h1>
-		<div>
-			<div id="popup" style="display: none">some text here</div>
-			<img id="devilwhitecity" src="bookimages/devilwhitecity.jpg" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
-		</div>
-		
-		<div>
-			<div id="popup1" style="display: none">some text here!!!</div>
-			<img id="whiteteeth" src="bookimages/whiteteeth.jpg" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
-		</div>
-		
-		<div>
-			<div id="popup2" style="display: none">!!!some text here</div>
-			<img id="alchemist" src="bookimages/alchemist.jpg" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
-		</div>
-		
-		<div>
-			<div id="popup3" style="display: none">!!!some text here!!!</div>
-			<img id="poorec" src="bookimages/poorec.jpg" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
-		</div>
-		
-		<div>
-			<div id="popup4" style="display: none">some!! text !!here</div>
-			<img id="oxygen" src="bookimages/oxygen.jpg" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
-		</div>
-	
-</body>
 
-</html>
+<h2>Modal Example</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
 
 <script>
-var e = document.getElementById('devilwhitecity');
-e.onmouseover = function() {
-  document.getElementById('popup').style.display = 'block';
-  document.getElementById('devilwhitecity').style.visibility = 'hidden';
-}
-e.onmouseout = function() {
-  document.getElementById('popup').style.display = 'none';
-  document.getElementById('devilwhitecity').style.visibility = 'visible';
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
 }
 
-var f = document.getElementById('whiteteeth');
-f.onmouseover = function() {
-  document.getElementById('popup1').style.display = 'block';
-  document.getElementById('whiteteeth').style.visibility = 'hidden';
-}	
-f.onmouseout = function() {
-  document.getElementById('popup1').style.display = 'none';
-  document.getElementById('whiteteeth').style.visibility = 'visible';
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
 }
 
-var g = document.getElementById('alchemist');
-g.onmouseover = function() {
-  document.getElementById('popup2').style.display = 'block';
-  document.getElementById('alchemist').style.visibility = 'hidden';
-}
-g.onmouseout = function() {
-  document.getElementById('popup2').style.display = 'none';
-  document.getElementById('alchemist').style.visibility = 'visible';
-}
-
-var h = document.getElementById('poorec');
-h.onmouseover = function() {
-  document.getElementById('popup3').style.display = 'block';
-  document.getElementById('poorec').style.visibility = 'hidden';
-}
-h.onmouseout = function() {
-  document.getElementById('popup3').style.display = 'none';
-  document.getElementById('poorec').style.visibility = 'visible';
-}
-
-var i = document.getElementById('oxygen');
-i.onmouseover = function() {
-  document.getElementById('popup4').style.display = 'block';
-  document.getElementById('oxygen').style.visibility = 'hidden';
-}
-i.onmouseout = function() {
-  document.getElementById('popup4').style.display = 'none';
-  document.getElementById('oxygen').style.visibility = 'visible';
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 </script>
+
+</body>
+</html>
+
+
+<button id="myBtn">Open Modal</button>
+<INPUT name="dispinfo" onClick="assignButton(this);" id="devilwhitecity" type="button" src="bookimages/devilwhitecity.jpg" value="devilwhitecity" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
+<INPUT name="dispinfo" onClick="assignButton(this);" id="whiteteeth" type="button" src="bookimages/whiteteeth.jpg" value="whiteteeth" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
+<INPUT name="dispinfo" onClick="assignButton(this);" id="alchemist" type="button" src="bookimages/alchemist.jpg" value="alchemist" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
+<INPUT name="dispinfo" onClick="assignButton(this);" id="poorec" type="button" src="bookimages/poorec.jpg" value="poorec" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
+<INPUT name="dispinfo" onClick="assignButton(this);" id="oxygen" type="button" src="bookimages/oxygen.jpg" value="oxygen" style="float: left; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
+<input type="button" onclick="alert_hi()" value="Button Two" />
+
