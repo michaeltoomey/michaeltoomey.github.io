@@ -3,9 +3,10 @@ body {
 	font-family: Calibri;
 }
 h1 {
-	color: blue;
+	color: dimgray;
 	text-align: center;
 }
 p {
-	color: purple;
+	color: dimgray;
+	text-align: center;
 }
