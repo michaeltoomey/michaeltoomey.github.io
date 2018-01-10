@@ -19,7 +19,7 @@ p {
 	text-align: left;
 }
 
-.modal {
+modal {
 	display: none;
 	position: fixed;
 	z-index: 1;
@@ -33,7 +33,7 @@ p {
 	background-color: rgba(0,0,0,0.4);
 }
 
-.modal-content {
+modal-content {
 	background-color: #fefefe;
 	margin: auto;
 	padding: 20px;
@@ -41,27 +41,27 @@ p {
 	width: 80%;
 }
 
-.close {
+close {
 	color: #aaaaaa;
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+close:hover,
+close:focus {
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
 }
 
-.container {
+container {
     position: relative;
     text-align: center;
     color: white;
 }
 
-.bottom-center {
+bottom-center {
     position: absolute;
     bottom: 5%;
     right: 5%;
