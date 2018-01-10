@@ -19,13 +19,13 @@ p {
 	text-align: left;
 }
 
-container {
+.container {
     position: relative;
     text-align: center;
     color: white;
 }
 
-bottom-center {
+.bottom-center {
     position: absolute;
     bottom: 5%;
     right: 5%;
