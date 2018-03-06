@@ -263,13 +263,13 @@
 				mapCanvas.selectAll("*").remove();
 				election = "data/election-results-" + year + ".csv";
 				mapCanvas.append("text")
-					.attr("x", margin.left)
+					.attr("x", width / 2)
 					.attr("y", margin.top)
-					.attr("text-anchor", "Left")
+					.attr("text-anchor", "middle")
 					.attr("font-size", "32px")
 					.attr("font-family", fontFam)
 					.attr("font-weight", "bold")
-					.text(year + " U.S. Presidential Election Electoral Map");
+					.text(year + " Electoral Map");
 				loadAndDraw(election);
 			}
         </script>
