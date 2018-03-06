@@ -11,7 +11,6 @@ Point selectionBoxFinal = new Point(0, 0);
 
 void setup() {
   surface.setSize(1000, 1000);
-  surface.setResizable(true);
   background(256, 256, 256);
   rectMode(CORNERS);
 
@@ -429,22 +428,18 @@ class SelectionBox {
         int lineIntersectCount = 0;
         if(topBoxLineIntersect > min(initialPoint.x, finalPoint.x)
            && topBoxLineIntersect < max(initialPoint.x, finalPoint.x)) {
-          print("Top intersect\n");
           lineIntersectCount++;
         }
         if(bottomBoxLineIntersect > min(initialPoint.x, finalPoint.x)
            && bottomBoxLineIntersect < max(initialPoint.x, finalPoint.x)) {
-           print("Bottom intersect\n");
            lineIntersectCount++;
         }
         if(leftBoxLineIntersect > min(initialPoint.y, finalPoint.y)
            && leftBoxLineIntersect < max(initialPoint.y, finalPoint.y)) {
-          print("Left intersect\n");
           lineIntersectCount++;
         }
         if(rightBoxLineIntersect > min(initialPoint.y, finalPoint.y)
            && rightBoxLineIntersect < max(initialPoint.y, finalPoint.y)) {
-          print("Right intersect\n");
           lineIntersectCount++;
         }
 

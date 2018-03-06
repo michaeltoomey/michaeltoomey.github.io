@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>U.S. Presidential Elections</title>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <style>
+        	div.tooltip {   
+                position: absolute;         
+                text-align: center;         
+                width: 225px;                    
+                height: 75px;                   
+                padding: 2px;               
+                font: 12px sans-serif;      
+                background: white;    
+                border: 1px;   
+                stroke: black;     
+                border-radius: 8px;         
+                pointer-events: none;           
+            }
+        </style>
+    </head>
+    <body>		
+    	<div id="option">
+		</div>
+        <script type="text/javascript">
+        	var data_layout = [["AK", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "ME"],
+        					   ["NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "NA", "VT", "NH"],
+        					   ["NA", "WA", "ID", "MT", "ND", "MN", "IL", "WI", "MI", "NY", "RI", "MA"],
+        					   ["NA", "OR", "NV", "WY", "SD", "IA", "IN", "OH", "PA", "NJ", "CT", "NA"],
+        					   ["NA", "CA", "UT", "CO", "NE", "MO", "KY", "WV", "VA", "MD", "DC", "NA"],
+        					   ["NA", "NA", "AZ", "NM", "KS", "AR", "TN", "NC", "SC", "DE", "NA", "NA"],
+        					   ["NA", "NA", "NA", "NA", "OK", "LA", "MS", "AL", "GA", "NA", "NA", "NA"],
+        					   ["NA", "HI", "NA", "NA", "TX", "NA", "NA", "NA", "NA", "FL", "NA", "NA"]];
+			var electionYears = [1940, 1944, 1948, 1952, 1956, 1960, 1964, 1968, 1972, 1976, 1980, 1984, 1988, 1992, 1996, 2000, 2004, 2008, 2012, 2016];
+			var election = 2016;
+			var fontFam = "helvetica";
+
+			var margin = {top: 30, right: 30, bottom: 30, left: 30},
+                width = 900 - margin.left - margin.right,
+                height = 650 - margin.top - margin.bottom,
+                rows = 8
+                cols = 12;
+
+			var state_width = width / 13;
+			var state_height = height / 9;
+
+            var xScale = d3.scaleLinear()
+                .range([margin.left, width])
+                .domain([0, cols]);
+
+            var yScale = d3.scaleLinear()
+                .range([margin.top, height])
+                .domain([0, rows]);
+
+            var mapCanvas = d3.select("body")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            var tooltip = d3.select("body").append("div")   
+                .attr("class", "tooltip")               
+                .style("opacity", 0);
+
+			updateData(election);
+
+			var legendCanvas = d3.select("body")
+				.append("svg")
+                .attr("width", width)
+                .attr("height", 50);
+
+            var legend = legendCanvas.selectAll("g")
+            	.data(function(){
+            		var d = [];
+            		for(i = 0; i < 12; i++){
+            			d.push(i);
+            		}
+            		return d;
+            	})
+            	.enter().append("g")
+            		.attr("transform", function(d){
+            			var x = state_width * d + margin.left;
+            			return "translate(" + x + "," + margin.top + ")";
+            		});
+            		
+            var legendBoxes = legend.append("rect")
+				.attr("width", state_width)
+				.attr("height", 5)
+				.attr("fill", function(d){
+					if(d < 6){
+							return d3.hsl(240, 1, interpolate(-1 * ((d * 10 - 60)), 0, 100, 0.95, 0.15));
+					}
+					return d3.hsl(360, 1, interpolate((d - 6) * 10, 0, 100, 0.95, 0.15));
+				});
+
+			var legendLabels = legend.append("text")
+				.html(function(d){
+					console.log(d);
+					if(d < 6){
+						console.log('SHAKA WHEN THE WALLS FELL')
+						if(d === 0){
+							return ">=50";
+						}
+						return (-1 * (((d) * 10) - 60)) + " to " + (-1 * (((d + 1) * 10) - 60));
+					}
+					else if(d === 11){
+						return ">=50";
+					}
+					return ((d - 6) * 10) + " to " + ((d - 6 + 1) * 10);
+				})
+					.attr("font-size", 12)
+       				.attr("font-family", fontFam)
+
+            var timelineCanvas = d3.select("body")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", 50);
+
+			var timelineElem = timelineCanvas.selectAll("g")
+            	.data(electionYears);
+
+            var timelineElemEnter = timelineElem.enter()
+            	.append("g")
+            	.attr("transform", function(d){
+            		var x = width / (electionYears.length + 1) * ((d - 1940) / 4) + margin.left;
+            		return "translate(" + x + "," + margin.top + ")";
+            	})
+            	.on("click", function(d){
+            		updateData(d);
+            	});
+
+            var timelineLabels = timelineElemEnter.append("text")
+            	.html(function(d){return d;})
+            		.attr("font-size", 12)
+       				.attr("font-family", fontFam)
+       				.attr("text-anchor", "middle")
+       				.attr("dy", -15)
+
+            d3.csv("data/yearwise-winner.csv", function(data){
+            	var circles = timelineElemEnter.append("circle")
+	            	.attr("r", 10)
+	            	.attr("fill", function(d){
+	            		for(i = 0; i < data.length; i++){
+	            			if(+data[i].YEAR == d){
+	            				if(data[i].PARTY === "D"){
+		            				return "blue";
+		            			}
+	            				return "red";
+            				}
+	            		}
+	            	})
+            });
+
+            function loadAndDraw(election){
+				d3.csv(election, function(data) {
+					var dVotes = [];
+					var rVotes = [];
+					var cleanedData = [];
+
+					data.forEach(function(d){
+						if(d.Abbreviation.trim() != ("").trim()){
+							d.Total_EV = +d.Total_EV;
+							d.D_Percentage = +d.D_Percentage;
+							d.D_Votes = +(d.D_Votes.replace(/,/g, ''));
+							d.R_Percentage = +d.R_Percentage;
+							d.R_Votes = +(d.R_Votes.replace(/,/, ''));
+
+							if(d.D_Percentage + d.R_Percentage > 100){
+								d.D_Percentage = Math.round(d.D_Votes / (d.D_Votes + d.R_Votes) * 1000) / 10;
+								d.R_Percentage = Math.round(d.R_Votes / (d.D_Votes + d.R_Votes) * 1000) / 10;
+							}
+
+							dVotes.push(d.D_Percentage);
+							rVotes.push(d.R_Percentage);
+
+							d.WinMargin = d.R_Percentage - d.D_Percentage;
+
+							cleanedData.push(d);
+						}
+					});
+
+					var maxDem = Math.max(...dVotes);
+					var maxRep = Math.max(...rVotes);
+
+					var elem = mapCanvas.selectAll("g")
+						.data(cleanedData);
+
+					var elemEnter = elem.enter()
+						.append("g")
+						.attr("transform", function(d){
+							var x = 0;
+							var y = 0;
+
+							for(i = 0; i < data_layout.length; i++){
+	                    		for(j = 0; j < data_layout[i].length; j++){
+	                    			if(d.Abbreviation == data_layout[i][j]){
+	                    				x = j * state_width + margin.left;
+	                    				y = i * state_width + margin.top + 10;
+	                    			}
+	                    		}
+		                    }
+		                    var coord = "translate(" + x + "," + y + ")";
+		                    return coord;
+						})
+						.on("mouseover", function(d) {    
+		                        tooltip.html(d.State + "</br>" 
+		                        			 + "Electoral Votes: " + d.Total_EV + "</br>"
+		                        			 + d.D_Nominee + ": " + d.D_Votes + " (" + d.D_Percentage + "%)" + "</br>"
+		                        			 + d.R_Nominee + ": " + d.R_Votes + " (" + d.R_Percentage + "%)")  
+		                        .style("left", (d3.event.pageX) + "px")     
+		                        .style("top", (d3.event.pageY) + "px")
+		                        .style("opacity", .9);  
+		                    })                  
+	                    .on("mouseout", function(d) {           
+	                        tooltip.style("opacity", 0);    
+	                    });
+
+					var stateBoxes = elemEnter.append("rect")
+	                    .attr("width", state_width)
+	                    .attr("height", state_height)
+	       				.attr("fill", function(d) {
+	       					if(d.D_Percentage > d. R_Percentage){
+	       						return d3.hsl(240, 1, interpolate(d.D_Percentage - d.R_Percentage, 0, 100, 0.95, 0.15));
+	       					}
+	       					else{
+								return d3.hsl(360, 1, interpolate(d.R_Percentage - d.D_Percentage, 0, 100, 0.95, 0.15));
+	       					}
+	       				})
+	       				.append("text").text(function(d){
+	       					return d.Abbreviation;
+	       				});
+
+		       		var stateNames = elemEnter.append("text")
+		       				.html(function(d){return d.Abbreviation;})
+		       				.attr("font-family", fontFam)
+		       				.attr("text-anchor", "middle")
+		       				.attr("dx", function(d) {
+		       					return state_height / 2;
+		       				})
+		       				.attr("dy", function(d){
+		       					return state_height / 2 - 14;
+		       				})
+
+		       		var stateEV = elemEnter.append("text")
+		       				.html(function(d){return d.Total_EV;})
+		       				.attr("font-family", fontFam)
+		       				.attr("text-anchor", "middle")
+		       				.attr("dx", function(d) {
+		       					return state_height / 2;
+		       				})
+		       				.attr("dy", function(d){
+		       					return state_height / 2;
+		       				})
+				});
+			}
+
+			function interpolate(val, inRangeMin, inRangeMax, outRangeMin, outRangeMax){
+				return ((val - inRangeMin) * (outRangeMax - outRangeMin)) / (inRangeMax - inRangeMin) + outRangeMin;
+			}
+
+			function updateData(year){
+				mapCanvas.selectAll("*").remove();
+				election = "data/election-results-" + year + ".csv";
+				mapCanvas.append("text")
+					.attr("x", margin.left)
+					.attr("y", margin.top)
+					.attr("text-anchor", "Left")
+					.attr("font-size", "32px")
+					.attr("font-family", fontFam)
+					.attr("font-weight", "bold")
+					.text(year + " U.S. Presidential Election Electoral Map");
+				loadAndDraw(election);
+			}
+        </script>
+    </body>
+</html>
