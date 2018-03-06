@@ -37,8 +37,8 @@
 			var fontFam = "helvetica";
 
 			var margin = {top: 30, right: 30, bottom: 30, left: 30},
-                width = 900 - margin.left - margin.right,
-                height = 650 - margin.top - margin.bottom,
+                width = 750 - margin.left - margin.right,
+                height = 500 - margin.top - margin.bottom,
                 rows = 8
                 cols = 12;
 
@@ -63,53 +63,6 @@
                 .style("opacity", 0);
 
 			updateData(election);
-
-			var legendCanvas = d3.select("body")
-				.append("svg")
-                .attr("width", width)
-                .attr("height", 50);
-
-            var legend = legendCanvas.selectAll("g")
-            	.data(function(){
-            		var d = [];
-            		for(i = 0; i < 12; i++){
-            			d.push(i);
-            		}
-            		return d;
-            	})
-            	.enter().append("g")
-            		.attr("transform", function(d){
-            			var x = state_width * d + margin.left;
-            			return "translate(" + x + "," + margin.top + ")";
-            		});
-            		
-            var legendBoxes = legend.append("rect")
-				.attr("width", state_width)
-				.attr("height", 5)
-				.attr("fill", function(d){
-					if(d < 6){
-							return d3.hsl(240, 1, interpolate(-1 * ((d * 10 - 60)), 0, 100, 0.95, 0.15));
-					}
-					return d3.hsl(360, 1, interpolate((d - 6) * 10, 0, 100, 0.95, 0.15));
-				});
-
-			var legendLabels = legend.append("text")
-				.html(function(d){
-					console.log(d);
-					if(d < 6){
-						console.log('SHAKA WHEN THE WALLS FELL')
-						if(d === 0){
-							return ">=50";
-						}
-						return (-1 * (((d) * 10) - 60)) + " to " + (-1 * (((d + 1) * 10) - 60));
-					}
-					else if(d === 11){
-						return ">=50";
-					}
-					return ((d - 6) * 10) + " to " + ((d - 6 + 1) * 10);
-				})
-					.attr("font-size", 12)
-       				.attr("font-family", fontFam)
 
             var timelineCanvas = d3.select("body")
                 .append("svg")
@@ -150,6 +103,54 @@
 	            		}
 	            	})
             });
+
+            var legendCanvas = d3.select("body")
+				.append("svg")
+                .attr("width", width)
+                .attr("height", 50);
+
+            var legendElem = legendCanvas.selectAll("g")
+            	.data(function(){
+            		var d = [];
+            		for(i = 0; i < 12; i++){
+            			d.push(i);
+            		}
+            		return d;
+            	});
+
+           var legendElemEnter = legendElem.enter().append("g")
+            		.attr("transform", function(d){
+            			var x = state_width * d + margin.left;
+            			return "translate(" + x + "," + margin.top + ")";
+            		});
+
+            var legendBoxes = legendElemEnter.append("rect")
+				.attr("width", state_width)
+				.attr("height", 5)
+				.attr("fill", function(d){
+					if(d < 6){
+						return d3.hsl(240, 1, interpolate(-1 * ((d * 10 - 60)), 0, 100, 0.95, 0.15));
+					}
+					return d3.hsl(360, 1, interpolate((d - 6) * 10, 0, 100, 0.95, 0.15));
+				});
+
+			var legendLabels = legendElemEnter.append("text")
+				.html(function(d){
+					console.log(d);
+					if(d < 6){
+						console.log('SHAKA WHEN THE WALLS FELL')
+						if(d === 0){
+							return ">=50";
+						}
+						return (-1 * (((d) * 10) - 60)) + " to " + (-1 * (((d + 1) * 10) - 60));
+					}
+					else if(d === 11){
+						return ">=50";
+					}
+					return ((d - 6) * 10) + " to " + ((d - 6 + 1) * 10);
+				})
+					.attr("font-size", 12)
+       				.attr("font-family", fontFam)
 
             function loadAndDraw(election){
 				d3.csv(election, function(data) {
@@ -195,7 +196,7 @@
 	                    		for(j = 0; j < data_layout[i].length; j++){
 	                    			if(d.Abbreviation == data_layout[i][j]){
 	                    				x = j * state_width + margin.left;
-	                    				y = i * state_width + margin.top + 10;
+	                    				y = i * state_height + margin.top;
 	                    			}
 	                    		}
 		                    }
@@ -238,7 +239,7 @@
 		       					return state_height / 2;
 		       				})
 		       				.attr("dy", function(d){
-		       					return state_height / 2 - 14;
+		       					return state_height / 2 - 4;
 		       				})
 
 		       		var stateEV = elemEnter.append("text")
@@ -249,7 +250,7 @@
 		       					return state_height / 2;
 		       				})
 		       				.attr("dy", function(d){
-		       					return state_height / 2;
+		       					return state_height / 2 + 10;
 		       				})
 				});
 			}
