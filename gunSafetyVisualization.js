@@ -21,6 +21,15 @@ var svg = d3.select("#chart")
 	.attr("width", width * 3)
 	.attr("height", height + 100)
 
+svg.append("text")
+	.attr("y", 25)
+	.attr("x", (width * 3) / 2)
+	.attr("text-anchor", "middle")
+	.text("Current Gun Death Rates, Laws, and Ownership by State")
+	.attr("font-family", fontFam)
+	.attr("font-weight", "bold")
+	.attr("font-size", 20)
+
 var svgDeaths = svg.append("svg")
     .attr("width", width)
     .attr("height", height)
@@ -32,7 +41,7 @@ var svgLaws = svg.append("svg")
     .attr("x", width);
 
 svgLaws.append("text")
-	.attr("y", 50)
+	.attr("y", 60)
 	.attr("x", width / 2)
 	.attr("text-anchor", "middle")
 	.text("Number of Gun Laws")
@@ -226,7 +235,7 @@ function ready(error, us_geojson, gunLawsByState) {
 		.attr("height", 20)
 		.attr("rx", 6)
 		.attr("ry", 6)
-		.attr("fill", d3.hsl(125, 0.65, 0.65))
+		.attr("fill", d3.hsl(160, 0.4, 0.60))
 		.on("mouseover", function(){
 			d3.select(this)
 				.style("stroke", "black")
