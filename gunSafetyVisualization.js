@@ -322,7 +322,7 @@ function ready(error, us_geojson, gunLawsByState) {
 	    });
 
 	svgDeaths.append("text")
-		.attr("y", 50)
+		.attr("y", 60)
 		.attr("x", width / 2)
 		.attr("text-anchor", "middle")
 		.text("Gun Death Rate by State")
@@ -384,7 +384,7 @@ function ready(error, us_geojson, gunLawsByState) {
 	    });
 
 	svgOwners.append("text")
-		.attr("y", 50)
+		.attr("y", 60)
 		.attr("x", width / 2)
 		.attr("text-anchor", "middle")
 		.text("Gun Ownership Rate by State")
