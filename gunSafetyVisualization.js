@@ -41,7 +41,7 @@ var svgLaws = svg.append("svg")
     .attr("x", width);
 
 svgLaws.append("text")
-	.attr("y", 50)
+	.attr("y", 60)
 	.attr("x", width / 2)
 	.attr("text-anchor", "middle")
 	.text("Number of Gun Laws")
