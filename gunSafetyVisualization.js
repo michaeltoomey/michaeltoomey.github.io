@@ -337,7 +337,7 @@ function ready(error, us_geojson, gunLawsByState) {
 	    .attr("d", path)
 	    .style("fill", function(d){
 	    	if(d["properties"]["name"] in gunLaws){
-				return d3.hsl(240, 0.65, interpolate(gunLaws[d["properties"]["name"]]["rateRegisteredGuns"], minOwners, maxOwners, 0.95, 0.1))
+				return d3.hsl(240, 0.65, interpolate(gunLaws[d["properties"]["name"]]["rateRegisteredGuns"], minOwners, maxOwners, 0.9, 0.1))
 		    }
 		    else{
 		    	return d3.hsl(0, 1, 1)
