@@ -1,0 +1,1300 @@
+{
+     "nodes": [
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YAL017W", 
+                    "name": "PSK1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YAL038W", 
+                    "name": "CDC19"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YAL040C", 
+                    "name": "CLN3"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YBL009W", 
+                    "name": "ALK2"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YBL088C", 
+                    "name": "TEL1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YBR093C", 
+                    "name": "PHO5"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YBR097W", 
+                    "name": "VPS15"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YBR136W", 
+                    "name": "MEC1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YCL024W", 
+                    "name": "KCC4"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": "proGrowth", 
+                    "id": "YCR012W", 
+                    "name": "PGK1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YCR091W", 
+                    "name": "KIN82"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YDL017W", 
+                    "name": "CDC7"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YDR247W", 
+                    "name": "VHS1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YDR300C", 
+                    "name": "PRO1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YDR507C", 
+                    "name": "GIN4"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YER075C", 
+                    "name": "PTP3"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YFL033C", 
+                    "name": "RIM15"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YFR019W", 
+                    "name": "FAB1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YGL059W", 
+                    "name": "PKP2"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YGL179C", 
+                    "name": "TOS3"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YGL180W", 
+                    "name": "ATG1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YGL215W", 
+                    "name": "CLG1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YGR123C", 
+                    "name": "PPT1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YGR161C", 
+                    "name": "YGR161C"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YGR188C", 
+                    "name": "BUB1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YHR071W", 
+                    "name": "PCL5"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YHR082C", 
+                    "name": "KSP1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YHR099W", 
+                    "name": "TRA1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YIR026C", 
+                    "name": "YVH1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YJL006C", 
+                    "name": "CTK2"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YJL187C", 
+                    "name": "SWE1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YKL001C", 
+                    "name": "MET14"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YKL048C", 
+                    "name": "ELM1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YKL101W", 
+                    "name": "HSL1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YKL161C", 
+                    "name": "KDX1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YLL019C", 
+                    "name": "KNS1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YLR210W", 
+                    "name": "CLB4"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YMR199W", 
+                    "name": "CLN1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YNL183C", 
+                    "name": "NPR1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YNL222W", 
+                    "name": "SSU72"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YNL289W", 
+                    "name": "PCL1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YOL016C", 
+                    "name": "CMK2"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YOR208W", 
+                    "name": "PTP2"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YOR233W", 
+                    "name": "KIN4"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YPL026C", 
+                    "name": "SKS1"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": "proGrowth", 
+                    "id": "YPL203W", 
+                    "name": "TPK2"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YPL219W", 
+                    "name": "PCL8"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YPL256C", 
+                    "name": "CLN2"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YPR111W", 
+                    "name": "DBF20"
+               }
+          }, 
+          {
+               "data": {
+                    "id": "YKL038W", 
+                    "name": "RGT1", 
+                    "metabolism": null
+               }
+          }
+     ], 
+     "edges": [
+          {
+               "data": {
+                    "lfc": 1.21169381574719, 
+                    "direct": null, 
+                    "id": "YKL038WYAL017Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YAL017W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.43618321702661, 
+                    "direct": "1", 
+                    "id": "YKL038WYAL038Wgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "represses", 
+                    "target": "YAL038W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.11630301167569, 
+                    "direct": null, 
+                    "id": "YKL038WYAL040Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YAL040C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.75347466442761, 
+                    "direct": null, 
+                    "id": "YKL038WYBL009Wgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YBL009W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.00918104016128, 
+                    "direct": null, 
+                    "id": "YKL038WYBL009Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YBL009W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.03129476788357, 
+                    "direct": null, 
+                    "id": "YKL038WYBL088Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YBL088C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.634650794611606, 
+                    "direct": null, 
+                    "id": "YKL038WYBR093Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YBR093C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.02130021024708, 
+                    "direct": null, 
+                    "id": "YKL038WYBR093Clowgluc", 
+                    "condition": "lowgluc", 
+                    "interaction": "activates", 
+                    "target": "YBR093C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.0357458661762802, 
+                    "direct": null, 
+                    "id": "YKL038WYBR097Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YBR097W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.1815031853072, 
+                    "direct": null, 
+                    "id": "YKL038WYBR136Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YBR136W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.18670647774481, 
+                    "direct": null, 
+                    "id": "YKL038WYCL024Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YCL024W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.85925587794492, 
+                    "direct": null, 
+                    "id": "YKL038WYCR012Wgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "represses", 
+                    "target": "YCR012W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.0890227191305, 
+                    "direct": null, 
+                    "id": "YKL038WYCR091Wgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "represses", 
+                    "target": "YCR091W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.06408576615612, 
+                    "direct": null, 
+                    "id": "YKL038WYDL017Wgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YDL017W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.4184715933220802, 
+                    "direct": null, 
+                    "id": "YKL038WYDR247Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YDR247W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.2860680055330802, 
+                    "direct": null, 
+                    "id": "YKL038WYDR300Cgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YDR300C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.0122850768893101, 
+                    "direct": null, 
+                    "id": "YKL038WYDR507Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YDR507C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.23596509170818, 
+                    "direct": null, 
+                    "id": "YKL038WYER075Cgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YER075C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.22087692745835, 
+                    "direct": null, 
+                    "id": "YKL038WYER075Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YER075C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.02181109157439, 
+                    "direct": null, 
+                    "id": "YKL038WYFL033Cgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "represses", 
+                    "target": "YFL033C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.07865968073064, 
+                    "direct": null, 
+                    "id": "YKL038WYFL033Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YFL033C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.01326767503433, 
+                    "direct": null, 
+                    "id": "YKL038WYFR019Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YFR019W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.90704593541697, 
+                    "direct": null, 
+                    "id": "YKL038WYGL059Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "represses", 
+                    "target": "YGL059W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.5421789629225702, 
+                    "direct": null, 
+                    "id": "YKL038WYGL179Cgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YGL179C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 0.4455206015166, 
+                    "direct": null, 
+                    "id": "YKL038WYGL180Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YGL180W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.33169617987702, 
+                    "direct": null, 
+                    "id": "YKL038WYGL215Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YGL215W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.00099359312317, 
+                    "direct": null, 
+                    "id": "YKL038WYGR123Cgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YGR123C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.6639956613960298, 
+                    "direct": null, 
+                    "id": "YKL038WYGR161Clowgluc", 
+                    "condition": "lowgluc", 
+                    "interaction": "activates", 
+                    "target": "YGR161C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.03184314976923, 
+                    "direct": null, 
+                    "id": "YKL038WYGR188Cgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YGR188C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.068058895117965, 
+                    "direct": null, 
+                    "id": "YKL038WYHR071Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YHR071W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.11701331520519, 
+                    "direct": null, 
+                    "id": "YKL038WYHR071Wlowgluc", 
+                    "condition": "lowgluc", 
+                    "interaction": "activates", 
+                    "target": "YHR071W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.07125708478613, 
+                    "direct": null, 
+                    "id": "YKL038WYHR082Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YHR082C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.05784767719256, 
+                    "direct": null, 
+                    "id": "YKL038WYHR099Wgalpluslys", 
+                    "condition": "galpluslys", 
+                    "interaction": "activates", 
+                    "target": "YHR099W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.08160068895555, 
+                    "direct": null, 
+                    "id": "YKL038WYHR099Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YHR099W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.04519093469263, 
+                    "direct": null, 
+                    "id": "YKL038WYHR099Wlowgluc", 
+                    "condition": "lowgluc", 
+                    "interaction": "activates", 
+                    "target": "YHR099W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.4341437103734198, 
+                    "direct": null, 
+                    "id": "YKL038WYIR026Cgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YIR026C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.4500091598968798, 
+                    "direct": null, 
+                    "id": "YKL038WYJL006Cgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YJL006C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.154460910055365, 
+                    "direct": null, 
+                    "id": "YKL038WYJL187Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YJL187C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.4193522071556899, 
+                    "direct": null, 
+                    "id": "YKL038WYKL001Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YKL001C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.0903689465735502, 
+                    "direct": null, 
+                    "id": "YKL038WYKL048Cgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YKL048C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.2260070963078349, 
+                    "direct": null, 
+                    "id": "YKL038WYKL101Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YKL101W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.22821852033645, 
+                    "direct": null, 
+                    "id": "YKL038WYKL101Wlowgluc", 
+                    "condition": "lowgluc", 
+                    "interaction": "activates", 
+                    "target": "YKL101W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.2970250230775302, 
+                    "direct": null, 
+                    "id": "YKL038WYKL161Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YKL161C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.26443571405187, 
+                    "direct": null, 
+                    "id": "YKL038WYLL019Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YLL019C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.77292833144928, 
+                    "direct": null, 
+                    "id": "YKL038WYLR210Wgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YLR210W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.259423530482715, 
+                    "direct": null, 
+                    "id": "YKL038WYMR199Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YMR199W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.1520457613300432, 
+                    "direct": null, 
+                    "id": "YKL038WYNL183Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YNL183C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.26604488763927, 
+                    "direct": null, 
+                    "id": "YKL038WYNL222Wgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YNL222W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.0344275648901702, 
+                    "direct": null, 
+                    "id": "YKL038WYNL289Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YNL289W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.10396891307267, 
+                    "direct": null, 
+                    "id": "YKL038WYOL016Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "represses", 
+                    "target": "YOL016C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.429603676481865, 
+                    "direct": null, 
+                    "id": "YKL038WYOR208Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YOR208W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.11398399196041, 
+                    "direct": null, 
+                    "id": "YKL038WYOR233Wgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YOR233W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 2.04480920532032, 
+                    "direct": "1", 
+                    "id": "YKL038WYPL026Cgalpluslys", 
+                    "condition": "galpluslys", 
+                    "interaction": "activates", 
+                    "target": "YPL026C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.5169957335659099, 
+                    "direct": "1", 
+                    "id": "YKL038WYPL026Cgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "activates", 
+                    "target": "YPL026C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.22825380812267, 
+                    "direct": "1", 
+                    "id": "YKL038WYPL026Clowgluc", 
+                    "condition": "lowgluc", 
+                    "interaction": "activates", 
+                    "target": "YPL026C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.1031098897473302, 
+                    "direct": null, 
+                    "id": "YKL038WYPL203Wgalminuslys", 
+                    "condition": "galminuslys", 
+                    "interaction": "represses", 
+                    "target": "YPL203W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "lys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gal"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.02772337420358, 
+                    "direct": null, 
+                    "id": "YKL038WYPL219Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YPL219W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.51984326850656, 
+                    "direct": null, 
+                    "id": "YKL038WYPL256Chighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YPL256C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.07317748126183, 
+                    "direct": null, 
+                    "id": "YKL038WYPR111Whighgluc", 
+                    "condition": "highgluc", 
+                    "interaction": "represses", 
+                    "target": "YPR111W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "gluc"
+               }
+          }
+     ]
+}

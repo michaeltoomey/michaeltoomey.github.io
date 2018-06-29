@@ -1,0 +1,82 @@
+{
+     "nodes": [
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YBR264C", 
+                    "name": "YPT10"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YDR009W", 
+                    "name": "GAL3"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YIR016W", 
+                    "name": "YIR016W"
+               }
+          }, 
+          {
+               "data": {
+                    "id": "YGL035C", 
+                    "name": "MIG1", 
+                    "metabolism": null
+               }
+          }
+     ], 
+     "edges": [
+          {
+               "data": {
+                    "lfc": -1.0572920888393, 
+                    "direct": null, 
+                    "id": 1, 
+                    "condition": "highgluc", 
+                    "interaction": "represses", 
+                    "target": "YBR264C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YGL035C", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.1487069646341674, 
+                    "direct": null, 
+                    "id": 2, 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YDR009W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YGL035C", 
+                    "mediaSugar": "gluc"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.1304350965691299, 
+                    "direct": null, 
+                    "id": 3, 
+                    "condition": "lowgluc", 
+                    "interaction": "represses", 
+                    "target": "YIR016W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YGL035C", 
+                    "mediaSugar": "gluc"
+               }
+          }
+     ]
+}

@@ -1,0 +1,36 @@
+{
+     "nodes": [
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YDR234W", 
+                    "name": "LYS4"
+               }
+          }, 
+          {
+               "data": {
+                    "id": "YGL035C", 
+                    "name": "MIG1", 
+                    "metabolism": null
+               }
+          }
+     ], 
+     "edges": [
+          {
+               "data": {
+                    "lfc": 1.1385548904393001, 
+                    "direct": null, 
+                    "id": 1, 
+                    "condition": "highgluc", 
+                    "interaction": "activates", 
+                    "target": "YDR234W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "nolys", 
+                    "lit": 0, 
+                    "source": "YGL035C", 
+                    "mediaSugar": "gluc"
+               }
+          }
+     ]
+}
