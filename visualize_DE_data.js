@@ -124,7 +124,7 @@ function loadDifferentialExpressionNetwork(fileNames) {
 		          		else return 'dashed';
 		          	},
 		          	'target-arrow-shape': function(ele) {
-		          		return (ele.data('lfc') > 0 ? 'triangle' : 'tee');
+		          		return (ele.data('lfc') < 0 ? 'triangle' : 'tee');
 		          	},
 		          	'target-arrow-color': function(ele){
 		          		cond = ele.data('condition');

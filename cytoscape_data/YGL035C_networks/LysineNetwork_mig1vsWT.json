@@ -22,7 +22,7 @@
                     "direct": null, 
                     "id": "YGL035CYDR234Whighgluc", 
                     "condition": "highgluc", 
-                    "interaction": "activates", 
+                    "interaction": "represses", 
                     "target": "YDR234W", 
                     "notes": null, 
                     "manual": 0, 

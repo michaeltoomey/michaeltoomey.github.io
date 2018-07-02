@@ -111,7 +111,7 @@ class ConditionContainer():
 
 					for condition in self.de_data.columns.values:
 						if not pd.isna(row[condition]):
-							interaction = 'represses' if row[condition] < 0 else 'activates'
+							interaction = 'represses' if row[condition] > 0 else 'activates'
 							edge_data = {'data': {'id': sourceGene + index + condition,
 													'source': sourceGene, 'target': index,
 													'interaction': interaction,

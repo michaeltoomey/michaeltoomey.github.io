@@ -22,7 +22,7 @@
                     "direct": null, 
                     "id": "YGL035CYPL061Whighgluc", 
                     "condition": "highgluc", 
-                    "interaction": "represses", 
+                    "interaction": "activates", 
                     "target": "YPL061W", 
                     "notes": null, 
                     "manual": 0, 

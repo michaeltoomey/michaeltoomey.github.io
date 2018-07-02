@@ -22,7 +22,7 @@
                     "direct": null, 
                     "id": "YGL209WYLR304Chighgluc", 
                     "condition": "highgluc", 
-                    "interaction": "activates", 
+                    "interaction": "represses", 
                     "target": "YLR304C", 
                     "notes": null, 
                     "manual": 0, 
