@@ -137,8 +137,8 @@ f.close()
 ##### MIG1 vs. WT ######
 
 #Import and organize Mig1 PWM and calling cards data
-rgt1_pwm_data = bindingData.PWMDataProcessor('../../Raw Data Sets/YGL035C.rank_scores.txt')
-rgt1_pwm_data.createGeneListFile('data_files/mig1_top_pwm_matches.txt')
+mig1_pwm_data = bindingData.PWMDataProcessor('../../Raw Data Sets/YGL035C.rank_scores.txt')
+mig1_pwm_data.createGeneListFile('data_files/mig1_top_pwm_matches.txt')
 #Add binding data to edge index file
 appended_info = appendedInformation.BuildAppendedGeneInformationFile(output_file='data_files/YGL035C_cytoscape_info_edges.json')
 appended_info.addGeneInformationToFile('direct', [1], ['data_files/mig1_top_pwm_matches.txt'])
@@ -182,8 +182,8 @@ f.close()
 ##### MIG2 vs. WT ######
 
 #Import and organize Mig2 PWM and calling cards data
-rgt1_pwm_data = bindingData.PWMDataProcessor('../../Raw Data Sets/YGL209W.rank_scores.txt')
-rgt1_pwm_data.createGeneListFile('data_files/mig2_top_pwm_matches.txt')
+mig2_pwm_data = bindingData.PWMDataProcessor('../../Raw Data Sets/YGL209W.rank_scores.txt')
+mig2_pwm_data.createGeneListFile('data_files/mig2_top_pwm_matches.txt')
 #Add binding data to edge index file
 appended_info = appendedInformation.BuildAppendedGeneInformationFile(output_file='data_files/YGL209W_cytoscape_info_edges.json')
 appended_info.addGeneInformationToFile('direct', [1], ['data_files/mig2_top_pwm_matches.txt'])
@@ -222,3 +222,63 @@ with open('gene_lists/mig2_network_lists.txt', 'r') as f:
 			o.write(network_name + ',' + filename + '\n')
 	o.close()
 f.close()
+
+
+##### SNF1 vs. WT ######
+
+# strain = 'YDR477W'
+# cond_metadata = []
+
+# sugar_content = ['Glucose'] * 6
+# lys_content = ['NoLys'] * 6
+# conds = timepoints
+# for cond, sugar, lys in zip(conds, sugar_content, lys_content):
+# 	metadata = {'name': cond, 'vars': {'sugar': sugar, 'lys': lys}, 'files': {}}
+# 	metadata['files']['edgeR'] = ff_edger.getFilePath([cond, 'BY4741', sugar, strain])
+# 	metadata['files']['DESeq2'] = ff_deseq2.getFilePath([cond, 'BY4741', sugar, strain])
+# 	cond_metadata += [metadata]
+
+# # data = conditions.ConditionContainer(cond_metadata, saved_data_file='processed_DE_data/mig2vsWT_comparisons.txt', node_data_to_append='data_files/YGL209W_cytoscape_info_edges.json', edge_data_to_append='data_files/YGL209W_cytoscape_info_nodes.json')
+# snf1_data = conditions.ConditionContainer(cond_metadata, node_data_to_append='data_files/cytoscape_info_nodes.json', edge_data_to_append='data_files/YGL209W_cytoscape_info_edges.json', target_lfc=1.0)
+# #Combine conditions into classes of interest
+# data.saveDEData('processed_DE_data/snf1vsWT_comparisons.txt')
+
+
+# ##### YBR033W.YKL038W vs. WT ######
+
+# strain = 'YDR477W'
+# cond_metadata = []
+
+# sugar_content = ['Glucose'] * 6
+# lys_content = ['NoLys'] * 6
+# conds = timepoints
+# for cond, sugar, lys in zip(conds, sugar_content, lys_content):
+# 	metadata = {'name': cond, 'vars': {'sugar': sugar, 'lys': lys}, 'files': {}}
+# 	metadata['files']['edgeR'] = ff_edger.getFilePath([cond, 'BY4741', sugar, strain])
+# 	metadata['files']['DESeq2'] = ff_deseq2.getFilePath([cond, 'BY4741', sugar, strain])
+# 	cond_metadata += [metadata]
+
+# # data = conditions.ConditionContainer(cond_metadata, saved_data_file='processed_DE_data/mig2vsWT_comparisons.txt', node_data_to_append='data_files/YGL209W_cytoscape_info_edges.json', edge_data_to_append='data_files/YGL209W_cytoscape_info_nodes.json')
+# eds1rgt1_data = conditions.ConditionContainer(cond_metadata, node_data_to_append='data_files/cytoscape_info_nodes.json', edge_data_to_append='data_files/YGL209W_cytoscape_info_edges.json', target_lfc=1.0)
+# #Combine conditions into classes of interest
+# data.saveDEData('processed_DE_data/eds1.rgt1vsWT_comparisons.txt')
+
+
+# ##### MIG1.MIG2 vs. WT ######
+
+# strain = 'YGL209W.YGL035C'
+# cond_metadata = []
+
+# sugar_content = ['Glucose'] * 6
+# lys_content = ['NoLys'] * 6
+# conds = timepoints
+# for cond, sugar, lys in zip(conds, sugar_content, lys_content):
+# 	metadata = {'name': cond, 'vars': {'sugar': sugar, 'lys': lys}, 'files': {}}
+# 	metadata['files']['edgeR'] = ff_edger.getFilePath([cond, 'BY4741', sugar, strain])
+# 	metadata['files']['DESeq2'] = ff_deseq2.getFilePath([cond, 'BY4741', sugar, strain])
+# 	cond_metadata += [metadata]
+
+# # data = conditions.ConditionContainer(cond_metadata, saved_data_file='processed_DE_data/mig2vsWT_comparisons.txt', node_data_to_append='data_files/YGL209W_cytoscape_info_edges.json', edge_data_to_append='data_files/YGL209W_cytoscape_info_nodes.json')
+# mig2mig1_data = conditions.ConditionContainer(cond_metadata, node_data_to_append='data_files/cytoscape_info_nodes.json', edge_data_to_append='data_files/YGL209W_cytoscape_info_edges.json', target_lfc=1.0)
+# #Combine conditions into classes of interest
+# data.saveDEData('processed_DE_data/mig2.mig1vsWT_comparisons.txt')

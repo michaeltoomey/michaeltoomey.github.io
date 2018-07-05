@@ -30,6 +30,13 @@
           }, 
           {
                "data": {
+                    "metabolism": "proGrowth", 
+                    "id": "YGL253W", 
+                    "name": "HXK2"
+               }
+          }, 
+          {
+               "data": {
                     "metabolism": null, 
                     "id": "YHR092C", 
                     "name": "HXT4"
@@ -159,6 +166,38 @@
                     "lit": 0, 
                     "source": "YBR033W", 
                     "mediaSugar": "Glucose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 3.3511901557945, 
+                    "direct": null, 
+                    "id": "YBR033WYGL253WGalactose.minusLys", 
+                    "condition": "Galactose.minusLys", 
+                    "interaction": "represses", 
+                    "target": "YGL253W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YBR033W", 
+                    "mediaSugar": "Galactose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.9640141605474901, 
+                    "direct": null, 
+                    "id": "YBR033WYGL253WGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
+                    "interaction": "represses", 
+                    "target": "YGL253W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "PlusLys", 
+                    "lit": 0, 
+                    "source": "YBR033W", 
+                    "mediaSugar": "Galactose"
                }
           }, 
           {

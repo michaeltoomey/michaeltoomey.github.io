@@ -45,6 +45,10 @@ function combineNetworks(networkArray) {
 	return combinedNetwork;
 }
 
+function resetView() {
+	loadDifferentialExpressionNetwork(files);
+}
+
 function loadDifferentialExpressionNetwork(fileNames) {
 	var data = [];
 	for(var fileName of fileNames) {
@@ -203,4 +207,6 @@ function loadDifferentialExpressionNetwork(fileNames) {
 			d.parentNode.removeChild(d);
 		}
 	});
+
+	cy.fit();
 }

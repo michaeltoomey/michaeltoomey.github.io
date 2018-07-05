@@ -28,6 +28,7 @@
             border-style: solid;
             border-color: white;
             border-width: 3px;
+            border-radius: 8px;
         }
 
         .dropbtn:hover {
@@ -98,10 +99,10 @@
 
     <div id='container'>
         <div class='dropdown'>
-            <button class='dropbtn' onclick="showCheckboxes()">
-                Click Here to Show/Hide Menu
-                <div class='dropdown-content' id='checkboxes'></div>
+            <button class='dropbtn' onclick="resetView()">
+                Reset View
             </button>
+            <div class='dropdown-content' id='checkboxes'></div>
         </div>
 
         <div id='cy'></div>

@@ -139,7 +139,8 @@ class ConditionContainer():
 
 							for key in self.info_to_append_edges.keys():
 								for subcategory in self.info_to_append_edges[key].keys():
-									if gene_name in self.info_to_append_edges[key][subcategory]:
+									g = self.orfs[gene_name] if gene_name in self.orfs.keys() else gene_name
+									if g in self.info_to_append_edges[key][subcategory]:
 										if key in edge_data['data'].keys():
 											if edge_data['data'][key] == None:
 												edge_data['data'][key] = subcategory
