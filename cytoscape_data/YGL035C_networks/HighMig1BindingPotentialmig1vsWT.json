@@ -17,8 +17,15 @@
           {
                "data": {
                     "metabolism": null, 
-                    "id": "YIR016W", 
-                    "name": "YIR016W"
+                    "id": "YNL149C", 
+                    "name": "PGA2"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YPR030W", 
+                    "name": "CSR2"
                }
           }, 
           {
@@ -32,50 +39,82 @@
      "edges": [
           {
                "data": {
-                    "lfc": -1.0572920888393, 
+                    "lfc": -1.082522889883815, 
                     "direct": null, 
-                    "id": 1, 
-                    "condition": "highgluc", 
-                    "interaction": "represses", 
+                    "id": "YGL035CYBR264CHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "activates", 
                     "target": "YBR264C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YGL035C", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.1487069646341674, 
+                    "lfc": 1.1037563216270483, 
                     "direct": null, 
-                    "id": 2, 
-                    "condition": "highgluc", 
-                    "interaction": "activates", 
+                    "id": "YGL035CYDR009WHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "represses", 
                     "target": "YDR009W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YGL035C", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.1304350965691299, 
+                    "lfc": -2.059379164175681, 
                     "direct": null, 
-                    "id": 3, 
-                    "condition": "lowgluc", 
-                    "interaction": "represses", 
-                    "target": "YIR016W", 
+                    "id": "YGL035CYNL149CHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "activates", 
+                    "target": "YNL149C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YGL035C", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -2.0126666007236853, 
+                    "direct": null, 
+                    "id": "YGL035CYNL149CLowGluc", 
+                    "condition": "LowGluc", 
+                    "interaction": "activates", 
+                    "target": "YNL149C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YGL035C", 
+                    "mediaSugar": "Glucose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.65304795179765, 
+                    "direct": null, 
+                    "id": "YGL035CYPR030WHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "represses", 
+                    "target": "YPR030W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YGL035C", 
+                    "mediaSugar": "Glucose"
                }
           }
      ]

@@ -1,80 +1,86 @@
 import sys, os, json
 import pandas as pd
+import numpy as np
 import process_DE_Data as proc
 
 class ConditionContainer():
 
-	def __init__(self, condition_names, condition_files, program, conditions_sugar, conditions_lys, saved_data_file='', node_data_to_append='data_files/cytoscape_info_nodes.json', edge_data_to_append='data_files/cytoscape_info_edges.json', pval=0.05, lfc=2.0, direction='abs'):
-		if program == 'DESeq2':
-			self.pval_name = 'padj'
-			self.lfc_name = 'log2FoldChange'
-		else:
-			self.pval_name = 'FDR'
-			self.lfc_name = 'logFC'
-
+	def __init__(self, condition_metadata, set_op='union', saved_data_file='', node_data_to_append='data_files/cytoscape_info_nodes.json', edge_data_to_append='data_files/cytoscape_info_edges.json', target_pval=0.05, target_lfc=2.0, direction='abs'):
+		self.condition_metadata = condition_metadata
+		self.conditions = [condition['name'] for condition in condition_metadata]
 		self.orfs = self.buildVerifiedORFsDict()
 		self.info_to_append_nodes = self.buildInfoToAppendDict(node_data_to_append)
 		self.info_to_append_edges = self.buildInfoToAppendDict(edge_data_to_append)
-
-		self.conditions_sugar = {}
-		for i, condition in enumerate(condition_names):
-			self.conditions_sugar[condition] = conditions_sugar[i]
-
-		self.conditions_lys = {}
-		for i, condition in enumerate(condition_names):
-			self.conditions_lys[condition] = conditions_lys[i]
+		self.pval = {'edgeR': 'FDR', 'DESeq2': 'padj'}
+		self.lfc = {'edgeR': 'logFC', 'DESeq2': 'log2FoldChange'}
 
 		if saved_data_file:
-			self.de_data = pd.read_csv(saved_data_file)
+			self.de_data = pd.read_csv(saved_data_file, sep='\t', index_col=0)
 		else:
-			data_list = []
+			raw_data_list = []
 			gene_list = []
-			for file in condition_files:
-				data = proc.DEDataProcessor(file, self.pval_name, self.lfc_name).genesLFCsPVals()
-				data_list += [data]
-				if gene_list:
-					gene_list = list(set(gene_list) & set(data.index.values))
-				else:
-					gene_list = list(set(data.index.values))
-			raw_data = pd.concat(data_list, keys=condition_names)
+			for cond in self.condition_metadata:
+				cond_data = []
+				keys = []
+				for program in cond['files'].keys():
+					prog_data = proc.DEDataProcessor(cond['files'][program], self.pval[program], self.lfc[program]).genesLFCsPVals()
+					cond_data += [prog_data]
+					keys += list(prog_data.columns.values)
+
+					if gene_list:
+						gene_list = list(set(gene_list) & set(prog_data.index.values))
+					else:
+						gene_list = list(set(prog_data.index.values))
+				raw_data_list += [pd.concat(cond_data, keys=cond['files'].keys())]
+			raw_data = pd.concat(raw_data_list, keys=self.conditions)
 
 			idx = pd.IndexSlice
-			self.de_data = pd.DataFrame(columns=condition_names)
-			for gene in raw_data.index.levels[1].values:
+			self.de_data = pd.DataFrame(columns=[condition['name'] for condition in self.condition_metadata])
+			for gene in raw_data.index.levels[2].values:
 				if gene in gene_list:
-					gene_data = raw_data.loc[idx[:, gene], [self.lfc_name, self.pval_name]]
+					gene_data = raw_data.loc[idx[:, :, gene], ['lfc', 'pval']]
 					processed_data = []
-					for index, row in gene_data.iterrows():
-						if direction == 'abs':
-							if abs(row[self.lfc_name]) >= lfc and row[self.pval_name] < pval:
-								processed_data += [row[self.lfc_name]]
-							else:
-								processed_data += [None]
-						elif direction == 'act':
-							if row[self.lfc_name] >= lfc and row[self.pval_name] < pval:
-								processed_data += [row[self.lfc_name]]
-							else:
-								processed_data += [None]
-						elif direction == 'repr':
-							if row[self.lfc_name] <= -1 * lfc and row[self.pval_name] < pval:
-								processed_data += [row[self.lfc_name]]
-							else:
-								processed_data += [None]
+					for cond in gene_data.index.levels[0].values:
+						gene_cond_data = gene_data.loc[idx[cond]]
+						processed_data += [self.extractLFC(gene_cond_data, 'intersection', target_pval, target_lfc, idx)]
 
-					if processed_data.count(None) != len(condition_names):
+					if processed_data.count(None) != len(self.conditions):
 						self.de_data.loc[gene] = processed_data
 
-	def combineConditions(self, conditions_to_combine, new_condition_name):
-		sugar = []
-		lys = []
+	def extractLFC(self, gene_condition_data, set_op, target_pval, target_lfc, idx):
+		lfc = []
+		for program in gene_condition_data.index.levels[0]:
+			prog_data = gene_condition_data.loc[idx[program]]
 
-		for condition in conditions_to_combine:
-			sugar += [self.conditions_sugar[condition]]
-			self.conditions_sugar.pop(condition)
-			lys += [self.conditions_lys[condition]]
-			self.conditions_lys.pop(condition)
-		self.conditions_sugar[new_condition_name] = list(set(sugar))[0] if len(set(sugar)) == 1 else ''.join(set(sugar))
-		self.conditions_lys[new_condition_name] = list(set(lys))[0] if len(set(lys)) == 1 else ''.join(set(lys))
+			gene_pval = prog_data.at[prog_data.index.values[0], 'pval']
+			gene_lfc = prog_data.at[prog_data.index.values[0], 'lfc']
+			if gene_pval < target_pval and abs(gene_lfc) > target_lfc:
+				lfc += [gene_lfc]
+		if lfc:
+			if set_op == 'intersection':
+				if len(lfc) == 2:
+					return np.mean(lfc)
+			else:
+				return np.mean(lfc)
+		return None
+
+
+	def combineConditions(self, conditions_to_combine, new_condition_name):
+		vars_dict = {}
+		for cond in conditions_to_combine:
+			for meta in self.condition_metadata:
+				if meta['name'] == cond:
+					for var in meta['vars'].keys():
+						if var in vars_dict:
+							vars_dict[var] += [meta['vars'][var]]
+						else:
+							vars_dict[var] = [meta['vars'][var]]
+					self.condition_metadata.remove(meta)
+
+		for var in vars_dict.keys():
+			vars_dict[var] = list(set(vars_dict[var]))[0] if len(set(vars_dict[var])) == 1 else ''.join(set(vars_dict[var]))
+
+		self.condition_metadata += [{'name': new_condition_name, 'vars': vars_dict}]
 
 		self.de_data[new_condition_name] = pd.concat([self.de_data[condition] for condition in conditions_to_combine], axis=1).mean(axis=1, numeric_only=True)
 		self.de_data = self.de_data.drop(conditions_to_combine, axis=1)
@@ -109,16 +115,22 @@ class ConditionContainer():
 								else:
 									node_data['data'][key] = None
 
-					for condition in self.de_data.columns.values:
-						if not pd.isna(row[condition]):
-							interaction = 'represses' if row[condition] > 0 else 'activates'
-							edge_data = {'data': {'id': sourceGene + index + condition,
+					for cond in self.de_data.columns.values:
+						lys = ''
+						sugar = ''
+						for cond_meta in self.condition_metadata:
+							if cond_meta['name'] == cond:
+								lys = cond_meta['vars']['lys']
+								sugar = cond_meta['vars']['sugar']
+						if not pd.isna(row[cond]):
+							interaction = 'represses' if row[cond] > 0 else 'activates'
+							edge_data = {'data': {'id': sourceGene + index + cond,
 													'source': sourceGene, 'target': index,
 													'interaction': interaction,
-													'lysInMedia':  self.conditions_lys[condition],
-													'mediaSugar': self.conditions_sugar[condition],
-													'condition': condition,
-													'lfc': row[condition],
+													'lysInMedia': lys,
+													'mediaSugar': sugar,
+													'condition': cond,
+													'lfc': row[cond],
 													'lit': 0,
 													'manual': 0,
 													'notes': None

@@ -18,18 +18,18 @@
      "edges": [
           {
                "data": {
-                    "lfc": -1.2201756184263965, 
+                    "lfc": -1.1744343478164299, 
                     "direct": null, 
-                    "id": 1, 
-                    "condition": "highgluc", 
-                    "interaction": "represses", 
+                    "id": "YGL035CYPL061WHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "activates", 
                     "target": "YPL061W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YGL035C", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }
      ]

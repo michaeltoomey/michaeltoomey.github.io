@@ -7,19 +7,18 @@ class DifferentialExpressionFiles():
 
 	def buildDirectoryMap(self):
 		self.dir_map = {}
-		for folder in os.listdir(self.data_dir):
-			for file in os.listdir(self.data_dir + folder):
-				f = file.replace('[', '').replace('.txt', '').split(']')
-				const_cond = f[0].split('-')
-				var_cond = f[1].split('_')[-1].split('-')
+		for file in os.listdir(self.data_dir):
+			f = file.replace('[', '').replace('.txt', '').split(']')
+			const_cond = f[0].split('-')
+			var_cond = f[1].split('_')[-1].split('-')
 
-				const_cond_formatted = []
-				for cond in const_cond:
-					const_cond_formatted += [cond.split('_')[-1]]
+			const_cond_formatted = []
+			for cond in const_cond:
+				const_cond_formatted += [cond.split('_')[-1]]
 
-				cond = const_cond_formatted + var_cond
+			cond = const_cond_formatted + var_cond
 
-				self.recursiveBuild(self.dir_map, cond, self.data_dir + folder + '/' + file)
+			self.recursiveBuild(self.dir_map, cond, self.data_dir + file)
 
 	def recursiveBuild(self, dir_map, paths_to_add, file):
 		if len(paths_to_add) == 1:

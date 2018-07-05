@@ -25,7 +25,15 @@
             color: black;
             padding: 16px;
             font-size: 16px;
-            border: none;
+            border-style: solid;
+            border-color: white;
+            border-width: 3px;
+        }
+
+        .dropbtn:hover {
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
         }
 
         .dropdown {
@@ -34,12 +42,13 @@
         }
 
         .dropdown-content {
-            display: none;
+            display: block;
             position: absolute;
             background-color: #f1f1f1;
             min-width: 300px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
+            padding: 10px;
         }
 
         .dropdown-content a {
@@ -47,11 +56,11 @@
             padding: 12px 16px;
         }
 
-        .dropdown-content a:hover {background-color: #ddd;}
+        /*.dropdown-content a:hover {background-color: #ddd;}*/
+        .dropdown-content {background-color: #ddd;}
+        /*.dropdown:hover .dropdown-content {display: block;}*/
 
-        .dropdown:hover .dropdown-content {display: block;}
-
-        .dropdown:hover .dropbtn {background-color: #3e8e41;}
+        /*.dropdown:hover .dropbtn {background-color: #3e8e41;}*/
 
         .checkHeader {
             font-size: 15px
@@ -89,8 +98,8 @@
 
     <div id='container'>
         <div class='dropdown'>
-            <button class='dropbtn'>
-                Please select a network.
+            <button class='dropbtn' onclick="showCheckboxes()">
+                Click Here to Show/Hide Menu
                 <div class='dropdown-content' id='checkboxes'></div>
             </button>
         </div>

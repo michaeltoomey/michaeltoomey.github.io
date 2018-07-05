@@ -1,6 +1,14 @@
-var file;
-var _file;
 var files = [];
+
+function showCheckboxes() {
+	// var x = document.getElementById('checkboxes');
+	// if(x.style.display === 'none') {
+	// 	x.style.display = 'block';
+	// }
+	// else {
+	// 	x.style.display = 'none';
+	// }
+}
 
 function parseFileMetadata(fileName) {
 	$.getJSON(fileName, function(data) {
@@ -18,16 +26,10 @@ function updateNetworks(checkbox) {
 		files.push(checkbox.value);
 	}
 	else if(files.includes(checkbox.value)) {
-		files.splice(indexOf(checkbox.value), 1);
+		files.splice(files.indexOf(checkbox.value), 1);
 	}
 
 	loadDifferentialExpressionNetwork(files);
-}
-
-function sndForm() {
-   	file = document.getElementById("dropdown");
-   	_file = file.options[file.selectedIndex].value;
-   	loadDifferentialExpressionNetwork(files);
 }
 
 function combineNetworks(networkArray) {
@@ -40,7 +42,6 @@ function combineNetworks(networkArray) {
 		combinedNetwork['nodes'] = combinedNetwork['nodes'].concat(network['nodes']);
 		combinedNetwork['edges'] = combinedNetwork['edges'].concat(network['edges']);
 	}
-	console.log(combinedNetwork);
 	return combinedNetwork;
 }
 
@@ -100,22 +101,24 @@ function loadDifferentialExpressionNetwork(fileNames) {
 		          	'width': function(ele) {
 		          		size = Math.abs(Math.round(ele.data('lfc') * 3));
 		          		size = Math.max(size, 1);
+		          		size = Math.min(size, 12);
 		          		return size + 'px';
 		          	},
 		          	'line-color': function(ele){
 		          		cond = ele.data('condition');
-		          		if(cond == 'highgluc') {
+		          		if(cond == 'HighGluc') {
 		          			return 'green';
 		          		}
-		          		else if(cond == 'lowgluc') {
+		          		else if(cond == 'LowGluc') {
 		          			return 'red';
 		          		}
-		          		else if(cond == 'galpluslys') {
-		          			return 'cyan'
+		          		else if(cond == 'Galactose.plusLys') {
+		          			return 'cyan';
 		          		}
-		          		else if(cond == 'galminuslys') {
-		          			return 'blue'
+		          		else if(cond == 'Galactose.minusLys') {
+		          			return 'blue';
 		          		}
+		          		return 'black';
 		          	},
 		          	'line-style': function(ele) {
 		          		if(ele.data('direct') == "1") {
@@ -128,18 +131,19 @@ function loadDifferentialExpressionNetwork(fileNames) {
 		          	},
 		          	'target-arrow-color': function(ele){
 		          		cond = ele.data('condition');
-		          		if(cond == 'highgluc') {
+		          		if(cond == 'HighGluc') {
 		          			return 'green';
 		          		}
-		          		else if(cond == 'lowgluc') {
+		          		else if(cond == 'LowGluc') {
 		          			return 'red';
 		          		}
-		          		else if(cond == 'galpluslys') {
-		          			return 'cyan'
+		          		else if(cond == 'Galactose.plusLys') {
+		          			return 'cyan';
 		          		}
-		          		else if(cond == 'galminuslys') {
-		          			return 'blue'
+		          		else if(cond == 'Galactose.minusLys') {
+		          			return 'blue';
 		          		}
+		          		return 'black';
 		          	}
 				}
 			}
@@ -160,12 +164,12 @@ function loadDifferentialExpressionNetwork(fileNames) {
 				return 'Growth';
 			}
 			else if(data =='proResp') {
-				return 'Respiration'
+				return 'Respiration';
 			}
 			else if(data =='proRespproGrowth') {
-				return 'Respiration and Growth'
+				return 'Respiration and Growth';
 			}
-			return 'No associated metabolic phenotype'
+			return 'No associated metabolic phenotype';
 		}
 
 		$('#cy').append('<div id=\'infobox\' class=\'tooltip\'><b>Systematic Name:</b> ' + sysName +'<br><b>Metabolic Phenotype:</b> ' + metab(elemData.metabolism) + '</div>')
@@ -187,7 +191,7 @@ function loadDifferentialExpressionNetwork(fileNames) {
 		var interaction = elemData.source + ' ' + elemData.interaction + ' ' + elemData.target;
 		var lfc = Math.round(elemData.lfc * 100) / 100;
 
-		$('#cy').append('<div id=\'infobox\' class=\'tooltip\'><b>Interaction:</b> ' + interaction +'<br><b>LFC:</b> ' + lfc + '<br><b>Condition:</b> ' + elemData.condition + '<br><b>Media:</b> ' + elemData.mediaSugar + '<br><b>Lysine:</b> ' + elemData.lysInMedia + '</div>');
+		$('#cy').append('<div id=\'infobox\' class=\'tooltip\'><b>Interaction:</b> ' + interaction +'<br><b>LFC:</b> ' + Math.abs(lfc) + '<br><b>Condition:</b> ' + elemData.condition + '<br><b>Media:</b> ' + elemData.mediaSugar + '<br><b>Lysine:</b> ' + elemData.lysInMedia + '</div>');
 		var d = document.getElementById('infobox');
 		d.style.position = 'absolute';
 		d.style.left = event.renderedPosition.x + 15 + 'px';

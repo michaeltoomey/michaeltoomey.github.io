@@ -45,13 +45,6 @@
           {
                "data": {
                     "metabolism": null, 
-                    "id": "YDL066W", 
-                    "name": "IDP1"
-               }
-          }, 
-          {
-               "data": {
-                    "metabolism": null, 
                     "id": "YDR050C", 
                     "name": "TPI1"
                }
@@ -89,13 +82,6 @@
                     "metabolism": "proGrowth", 
                     "id": "YGL253W", 
                     "name": "HXK2"
-               }
-          }, 
-          {
-               "data": {
-                    "metabolism": "proGrowth", 
-                    "id": "YGL256W", 
-                    "name": "ADH4"
                }
           }, 
           {
@@ -213,6 +199,13 @@
           {
                "data": {
                     "metabolism": null, 
+                    "id": "YMR303C", 
+                    "name": "ADH2"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
                     "id": "YNL009W", 
                     "name": "IDP3"
                }
@@ -268,6 +261,13 @@
           }, 
           {
                "data": {
+                    "metabolism": null, 
+                    "id": "YPR006C", 
+                    "name": "ICL2"
+               }
+          }, 
+          {
+               "data": {
                     "id": "YKL038W", 
                     "name": "RGT1", 
                     "metabolism": null
@@ -277,866 +277,802 @@
      "edges": [
           {
                "data": {
-                    "lfc": -1.43618321702661, 
+                    "lfc": -1.499287002128205, 
                     "direct": "1", 
-                    "id": "YKL038WYAL038Wgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYAL038WGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YAL038W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": -2.03668730181374, 
+                    "lfc": -1.829732483702335, 
                     "direct": null, 
-                    "id": "YKL038WYBR145Whighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYBR145WHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "activates", 
                     "target": "YBR145W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.48295586483237, 
+                    "lfc": -1.45472902682785, 
                     "direct": null, 
-                    "id": "YKL038WYBR196Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYBR196CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YBR196C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.38201972864797, 
+                    "lfc": 1.22446039572108, 
                     "direct": null, 
-                    "id": "YKL038WYCL040Whighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYCL040WHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YCL040W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.4354575688175901, 
+                    "lfc": 1.33218287104306, 
                     "direct": null, 
-                    "id": "YKL038WYCR005Chighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYCR005CHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YCR005C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.85925587794492, 
+                    "lfc": -1.84013372569596, 
                     "direct": null, 
-                    "id": "YKL038WYCR012Wgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYCR012WGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YCR012W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.03578314676591, 
+                    "lfc": -1.27718302599646, 
                     "direct": null, 
-                    "id": "YKL038WYDL066Whighgluc", 
-                    "condition": "highgluc", 
-                    "interaction": "represses", 
-                    "target": "YDL066W", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "nolys", 
-                    "lit": 0, 
-                    "source": "YKL038W", 
-                    "mediaSugar": "gluc"
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": -1.25798903156745, 
-                    "direct": null, 
-                    "id": "YKL038WYDR050Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYDR050CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YDR050C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.2437527797505, 
+                    "lfc": -1.19694425615518, 
                     "direct": null, 
-                    "id": "YKL038WYER065Cgalpluslys", 
-                    "condition": "galpluslys", 
+                    "id": "YKL038WYER065CGalactose.minusLys", 
+                    "condition": "Galactose.minusLys", 
                     "interaction": "activates", 
                     "target": "YER065C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.2981125382075, 
+                    "lfc": 1.369346281638855, 
                     "direct": null, 
-                    "id": "YKL038WYER065Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYER065CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "represses", 
                     "target": "YER065C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": -2.0966247100161897, 
+                    "lfc": -1.822495613303695, 
                     "direct": null, 
-                    "id": "YKL038WYER073Whighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYER073WHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "activates", 
                     "target": "YER073W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.05173294910534, 
+                    "lfc": 1.57495423183191, 
                     "direct": "1", 
-                    "id": "YKL038WYFR053Cgalpluslys", 
-                    "condition": "galpluslys", 
+                    "id": "YKL038WYFR053CHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YFR053C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.5733365713445602, 
-                    "direct": "1", 
-                    "id": "YKL038WYFR053Chighgluc", 
-                    "condition": "highgluc", 
-                    "interaction": "represses", 
-                    "target": "YFR053C", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "nolys", 
-                    "lit": 0, 
-                    "source": "YKL038W", 
-                    "mediaSugar": "gluc"
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": 1.2400894774102948, 
+                    "lfc": 1.14635459271872, 
                     "direct": null, 
-                    "id": "YKL038WYGL062Whighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYGL062WHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YGL062W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.7762551283319097, 
+                    "lfc": 1.6838605217073699, 
                     "direct": null, 
-                    "id": "YKL038WYGL253Wgalpluslys", 
-                    "condition": "galpluslys", 
+                    "id": "YKL038WYGL253WGalactose.minusLys", 
+                    "condition": "Galactose.minusLys", 
                     "interaction": "represses", 
                     "target": "YGL253W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 2.2372077546371605, 
+                    "lfc": 2.2294107305589446, 
                     "direct": null, 
-                    "id": "YKL038WYGL253Wgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYGL253WGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "represses", 
                     "target": "YGL253W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.20349562865953, 
+                    "lfc": 1.1633585232896901, 
                     "direct": null, 
-                    "id": "YKL038WYGL253Wlowgluc", 
-                    "condition": "lowgluc", 
+                    "id": "YKL038WYGL253WLowGluc", 
+                    "condition": "LowGluc", 
                     "interaction": "represses", 
                     "target": "YGL253W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.52151986238318, 
+                    "lfc": -1.913875437349235, 
                     "direct": null, 
-                    "id": "YKL038WYGL256Whighgluc", 
-                    "condition": "highgluc", 
-                    "interaction": "represses", 
-                    "target": "YGL256W", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "nolys", 
-                    "lit": 0, 
-                    "source": "YKL038W", 
-                    "mediaSugar": "gluc"
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": -1.8967746032033799, 
-                    "direct": null, 
-                    "id": "YKL038WYGR192Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYGR192CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YGR192C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": -2.3054861748310698, 
+                    "lfc": -2.22368770888679, 
                     "direct": null, 
-                    "id": "YKL038WYGR254Wgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYGR254WGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YGR254W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.4577914701597599, 
+                    "lfc": -1.878146395994965, 
                     "direct": null, 
-                    "id": "YKL038WYGR254Whighgluc", 
-                    "condition": "highgluc", 
-                    "interaction": "represses", 
-                    "target": "YGR254W", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "nolys", 
-                    "lit": 0, 
-                    "source": "YKL038W", 
-                    "mediaSugar": "gluc"
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": -2.13724771221486, 
-                    "direct": null, 
-                    "id": "YKL038WYHR174Wgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYHR174WGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YHR174W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.1558768305555802, 
+                    "lfc": 1.0896643529725152, 
                     "direct": null, 
-                    "id": "YKL038WYIL125Whighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYIL125WHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YIL125W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": -2.21915270317242, 
+                    "lfc": -2.1787866711708803, 
                     "direct": null, 
-                    "id": "YKL038WYJL052Wgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYJL052WGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YJL052W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 2.7098541396052234, 
+                    "lfc": 1.859132100705785, 
                     "direct": null, 
-                    "id": "YKL038WYJL052Whighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYJL052WHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YJL052W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.66390414636464, 
+                    "lfc": -1.64244184443538, 
                     "direct": null, 
-                    "id": "YKL038WYJR009Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYJR009CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YJR009C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.08719984625383, 
+                    "lfc": -1.7702293146831498, 
                     "direct": null, 
-                    "id": "YKL038WYJR009Chighgluc", 
-                    "condition": "highgluc", 
-                    "interaction": "represses", 
-                    "target": "YJR009C", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "nolys", 
-                    "lit": 0, 
-                    "source": "YKL038W", 
-                    "mediaSugar": "gluc"
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": -1.81558182774216, 
-                    "direct": null, 
-                    "id": "YKL038WYKL060Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYKL060CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YKL060C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.3718590674109552, 
+                    "lfc": 1.568143963761035, 
                     "direct": null, 
-                    "id": "YKL038WYKL148Chighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYKL148CHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YKL148C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": -2.0876285498992, 
+                    "lfc": -2.598348936221285, 
                     "direct": null, 
-                    "id": "YKL038WYKL152Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYKL152CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YKL152C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.3810262641897, 
+                    "lfc": -1.03983959955307, 
                     "direct": null, 
-                    "id": "YKL038WYKR097Whighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYKL152CHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "activates", 
+                    "target": "YKL152C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "Glucose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.31790309860599, 
+                    "direct": null, 
+                    "id": "YKL038WYKR097WHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "activates", 
                     "target": "YKR097W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": -3.0789039275799195, 
+                    "lfc": -2.14871574066634, 
                     "direct": null, 
-                    "id": "YKL038WYKR097Wlowgluc", 
-                    "condition": "lowgluc", 
-                    "interaction": "activates", 
-                    "target": "YKR097W", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "nolys", 
-                    "lit": 0, 
-                    "source": "YKL038W", 
-                    "mediaSugar": "gluc"
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": -2.17221915070115, 
-                    "direct": null, 
-                    "id": "YKL038WYLR044Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYLR044CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YLR044C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.4946419208224502, 
+                    "lfc": 1.5988867186206523, 
                     "direct": null, 
-                    "id": "YKL038WYLR134Whighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYLR134WHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YLR134W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.7912058273087401, 
+                    "lfc": 1.4902732630352649, 
                     "direct": null, 
-                    "id": "YKL038WYLR153Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYLR153CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "represses", 
                     "target": "YLR153C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.1977364675619, 
+                    "lfc": 1.1046797791958602, 
                     "direct": null, 
-                    "id": "YKL038WYLR304Chighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYLR304CHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YLR304C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.40723680283625, 
+                    "lfc": -1.4217964607968998, 
                     "direct": null, 
-                    "id": "YKL038WYMR169Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYMR169CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YMR169C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.97967929668872, 
+                    "lfc": -1.2549502463742401, 
                     "direct": null, 
-                    "id": "YKL038WYMR169Chighgluc", 
-                    "condition": "highgluc", 
-                    "interaction": "represses", 
-                    "target": "YMR169C", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "nolys", 
-                    "lit": 0, 
-                    "source": "YKL038W", 
-                    "mediaSugar": "gluc"
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": -1.3003138108146999, 
-                    "direct": null, 
-                    "id": "YKL038WYMR170Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYMR170CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YMR170C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.44723348811677, 
+                    "lfc": 1.1945943214277, 
                     "direct": null, 
-                    "id": "YKL038WYMR170Chighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYMR170CHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YMR170C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.4812980388015802, 
+                    "lfc": 2.5986879706956802, 
                     "direct": null, 
-                    "id": "YKL038WYNL009Wgalpluslys", 
-                    "condition": "galpluslys", 
+                    "id": "YKL038WYMR303CGalactose.minusLys", 
+                    "condition": "Galactose.minusLys", 
+                    "interaction": "represses", 
+                    "target": "YMR303C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "Galactose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.4372508368634649, 
+                    "direct": null, 
+                    "id": "YKL038WYNL009WGalactose.minusLys", 
+                    "condition": "Galactose.minusLys", 
                     "interaction": "represses", 
                     "target": "YNL009W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.5668900933990202, 
+                    "lfc": -1.234789962095845, 
                     "direct": null, 
-                    "id": "YKL038WYNL009Wgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYNL009WGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YNL009W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.51368644680797, 
+                    "lfc": 1.490004394360835, 
                     "direct": null, 
-                    "id": "YKL038WYNL037Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYNL037CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "represses", 
                     "target": "YNL037C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.2526456617547, 
+                    "lfc": 1.22131861205234, 
                     "direct": null, 
-                    "id": "YKL038WYNL117Wgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYNL117WGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "represses", 
                     "target": "YNL117W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.36242730788962, 
+                    "lfc": 1.5050495081197601, 
                     "direct": null, 
-                    "id": "YKL038WYNL117Whighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYNL117WHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YNL117W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.17375439986503, 
+                    "lfc": 1.1336406000833799, 
                     "direct": null, 
-                    "id": "YKL038WYNR001Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYNR001CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "represses", 
                     "target": "YNR001C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.06022615880616, 
+                    "lfc": -1.3122160052473, 
                     "direct": null, 
-                    "id": "YKL038WYNR001Chighgluc", 
-                    "condition": "highgluc", 
-                    "interaction": "represses", 
-                    "target": "YNR001C", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "nolys", 
-                    "lit": 0, 
-                    "source": "YKL038W", 
-                    "mediaSugar": "gluc"
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": -1.39365730569996, 
-                    "direct": null, 
-                    "id": "YKL038WYOL086Cgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYOL086CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YOL086C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.8542513686392599, 
+                    "lfc": -1.76653771356926, 
                     "direct": null, 
-                    "id": "YKL038WYOL126Cgalpluslys", 
-                    "condition": "galpluslys", 
+                    "id": "YKL038WYOL126CGalactose.minusLys", 
+                    "condition": "Galactose.minusLys", 
                     "interaction": "activates", 
                     "target": "YOL126C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.4728525878886798, 
+                    "lfc": -1.41346391165587, 
                     "direct": null, 
-                    "id": "YKL038WYOL126Chighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYOL126CHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "activates", 
                     "target": "YOL126C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.45396651128727, 
+                    "lfc": 1.390003922991135, 
                     "direct": null, 
-                    "id": "YKL038WYOR136Wgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYOR136WGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "represses", 
                     "target": "YOR136W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.1913900054965, 
+                    "lfc": 1.16639962904746, 
                     "direct": null, 
-                    "id": "YKL038WYOR374Wgalpluslys", 
-                    "condition": "galpluslys", 
+                    "id": "YKL038WYOR374WGalactose.minusLys", 
+                    "condition": "Galactose.minusLys", 
                     "interaction": "represses", 
                     "target": "YOR374W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.84155302861927, 
+                    "lfc": -1.600328351107545, 
                     "direct": null, 
-                    "id": "YKL038WYOR374Wgalminuslys", 
-                    "condition": "galminuslys", 
+                    "id": "YKL038WYOR374WGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
                     "interaction": "activates", 
                     "target": "YOR374W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "lys", 
+                    "lysInMedia": "PlusLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gal"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.4022893394819351, 
+                    "lfc": 1.48407747887429, 
                     "direct": null, 
-                    "id": "YKL038WYOR374Whighgluc", 
-                    "condition": "highgluc", 
+                    "id": "YKL038WYOR374WHighGluc", 
+                    "condition": "HighGluc", 
                     "interaction": "represses", 
                     "target": "YOR374W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.226594752581935, 
+                    "direct": null, 
+                    "id": "YKL038WYPR006CGalactose.minusLys", 
+                    "condition": "Galactose.minusLys", 
+                    "interaction": "represses", 
+                    "target": "YPR006C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "Galactose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.4444871940106752, 
+                    "direct": null, 
+                    "id": "YKL038WYPR006CGalactose.plusLys", 
+                    "condition": "Galactose.plusLys", 
+                    "interaction": "represses", 
+                    "target": "YPR006C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "PlusLys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "Galactose"
                }
           }
      ]

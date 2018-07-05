@@ -29,7 +29,6 @@ def combineGeneLists(filename, files_to_combine):
 			for line in f:
 				line = line.strip()
 				gene_list += [line]
-		f.close()
 
 	with open(filename, 'w') as f:
 		for item in gene_list:

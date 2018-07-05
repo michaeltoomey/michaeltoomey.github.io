@@ -9,9 +9,9 @@
           }, 
           {
                "data": {
-                    "metabolism": null, 
-                    "id": "YJL052W", 
-                    "name": "TDH1"
+                    "metabolism": "proGrowth", 
+                    "id": "YKL152C", 
+                    "name": "GPM1"
                }
           }, 
           {
@@ -25,34 +25,34 @@
      "edges": [
           {
                "data": {
-                    "lfc": 1.6758448760468732, 
+                    "lfc": 1.7797901096369524, 
                     "direct": null, 
-                    "id": 1, 
-                    "condition": "highgluc", 
-                    "interaction": "activates", 
+                    "id": "YGL035CYFR053CHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "represses", 
                     "target": "YFR053C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YGL035C", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.14986328408861, 
+                    "lfc": -1.25039646206603, 
                     "direct": null, 
-                    "id": 2, 
-                    "condition": "highgluc", 
-                    "interaction": "represses", 
-                    "target": "YJL052W", 
+                    "id": "YGL035CYKL152CHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "activates", 
+                    "target": "YKL152C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "nolys", 
+                    "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YGL035C", 
-                    "mediaSugar": "gluc"
+                    "mediaSugar": "Glucose"
                }
           }
      ]

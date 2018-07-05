@@ -4,8 +4,7 @@ import pandas as pd
 class DEDataProcessor():
 
 	def __init__(self, de_data_file, pval_name, lfc_name):
-		self.raw_de_data = pd.read_csv(de_data_file, index_col=0, sep='\t')
-		self.de_data = self.raw_de_data
+		self.de_data = pd.read_csv(de_data_file, index_col=0, sep='\t')
 
 		self.pval_name = pval_name
 		self.lfc_name = lfc_name
@@ -25,7 +24,9 @@ class DEDataProcessor():
 			self.de_data = activated_data[activated_data[self.lfc_name] > lfc_abs]
 
 	def genesLFCsPVals(self):
-		return self.de_data[[self.lfc_name, self.pval_name]]
+		lfc_pval_data = self.de_data[[self.lfc_name, self.pval_name]]
+		lfc_pval_data.columns = ['lfc', 'pval']
+		return lfc_pval_data
 
 	def reset(self):
 		self.de_data = self.raw_de_data
