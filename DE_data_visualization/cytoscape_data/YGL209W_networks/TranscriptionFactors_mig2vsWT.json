@@ -178,7 +178,7 @@
           }, 
           {
                "data": {
-                    "lfc": 1.12287369462701, 
+                    "lfc": 1.1228736946270101, 
                     "direct": null, 
                     "id": "YGL209WYDL170WLowGluc", 
                     "condition": "LowGluc", 
@@ -194,7 +194,7 @@
           }, 
           {
                "data": {
-                    "lfc": 1.3506638534794901, 
+                    "lfc": 1.35066385347949, 
                     "direct": null, 
                     "id": "YGL209WYDR096WHighGluc", 
                     "condition": "HighGluc", 
@@ -211,7 +211,7 @@
           {
                "data": {
                     "lfc": 1.312299607019685, 
-                    "direct": null, 
+                    "direct": "1", 
                     "id": "YGL209WYDR216WHighGluc", 
                     "condition": "HighGluc", 
                     "interaction": "represses", 
@@ -274,7 +274,7 @@
           }, 
           {
                "data": {
-                    "lfc": -1.234333710448745, 
+                    "lfc": -1.2343337104487453, 
                     "direct": null, 
                     "id": "YGL209WYGL166WLowGluc", 
                     "condition": "LowGluc", 
@@ -402,7 +402,7 @@
           }, 
           {
                "data": {
-                    "lfc": 1.36062687746202, 
+                    "lfc": 1.3606268774620198, 
                     "direct": null, 
                     "id": "YGL209WYMR280CHighGluc", 
                     "condition": "HighGluc", 

@@ -40,7 +40,7 @@
           {
                "data": {
                     "lfc": -1.07046687521288, 
-                    "direct": null, 
+                    "direct": "1", 
                     "id": "YKL038WYBR252WHighGluc", 
                     "condition": "HighGluc", 
                     "interaction": "activates", 
@@ -56,14 +56,14 @@
           {
                "data": {
                     "lfc": 1.0573453442085352, 
-                    "direct": null, 
-                    "id": "YKL038WYDL191WGalactose.minusLys", 
-                    "condition": "Galactose.minusLys", 
+                    "direct": "1", 
+                    "id": "YKL038WYDL191WGal", 
+                    "condition": "Gal", 
                     "interaction": "represses", 
                     "target": "YDL191W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "NoLys", 
+                    "lysInMedia": "PlusLysNoLys", 
                     "lit": 0, 
                     "source": "YKL038W", 
                     "mediaSugar": "Galactose"
@@ -72,7 +72,7 @@
           {
                "data": {
                     "lfc": -1.280612080866605, 
-                    "direct": null, 
+                    "direct": "1", 
                     "id": "YKL038WYDR031WHighGluc", 
                     "condition": "HighGluc", 
                     "interaction": "activates", 
@@ -87,8 +87,8 @@
           }, 
           {
                "data": {
-                    "lfc": -1.39749703240945, 
-                    "direct": null, 
+                    "lfc": -1.3974970324094498, 
+                    "direct": "1", 
                     "id": "YKL038WYDR031WLowGluc", 
                     "condition": "LowGluc", 
                     "interaction": "activates", 
@@ -104,7 +104,7 @@
           {
                "data": {
                     "lfc": 1.20153060634737, 
-                    "direct": null, 
+                    "direct": "1", 
                     "id": "YKL038WYGL197WHighGluc", 
                     "condition": "HighGluc", 
                     "interaction": "represses", 

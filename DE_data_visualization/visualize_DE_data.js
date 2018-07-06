@@ -1,15 +1,5 @@
 var files = [];
 
-function showCheckboxes() {
-	// var x = document.getElementById('checkboxes');
-	// if(x.style.display === 'none') {
-	// 	x.style.display = 'block';
-	// }
-	// else {
-	// 	x.style.display = 'none';
-	// }
-}
-
 function parseFileMetadata(fileName) {
 	$.getJSON(fileName, function(data) {
 		for(var genotype in data) {
@@ -73,24 +63,24 @@ function loadDifferentialExpressionNetwork(fileNames) {
 						'text-halign': 'center',
 						'text-valign': 'center',
 						'font-size': 13,
-					'border-width': 5,
+					'border-width': 3,
 						'background-color': function(ele) {
 							metab = ele.data('metabolism');
 							if(metab == 'proGrowth') {
-								return 'yellow';
+								return '#FFFF3A';
 							}
 							else if(metab == 'proResp') {
-								return 'cyan';
+								return '#81F4E1';
 							}
 							else if(metab == 'proRespproGrowth') {
-								return 'cyan';
+								return '#81F4E1';
 							}
 							else return 'white';
 						},
 						'border-color': function(ele) {
 							metab = ele.data('metabolism');
 							if(metab == 'proRespproGrowth') {
-								return 'yellow';
+								return '#FFFF3A';
 							}
 							else return 'black';
 						},
@@ -111,16 +101,19 @@ function loadDifferentialExpressionNetwork(fileNames) {
 		          	'line-color': function(ele){
 		          		cond = ele.data('condition');
 		          		if(cond == 'HighGluc') {
-		          			return 'green';
+		          			return '#24B556';
 		          		}
 		          		else if(cond == 'LowGluc') {
-		          			return 'red';
+		          			return '#E63946';
 		          		}
 		          		else if(cond == 'Galactose.plusLys') {
-		          			return 'cyan';
+		          			return '#073B4C';
 		          		}
 		          		else if(cond == 'Galactose.minusLys') {
-		          			return 'blue';
+		          			return '#FFD166';
+		          		}
+		          		else if(cond == 'Gal') {
+		          			return '#3DA5D9';
 		          		}
 		          		return 'black';
 		          	},
@@ -136,16 +129,19 @@ function loadDifferentialExpressionNetwork(fileNames) {
 		          	'target-arrow-color': function(ele){
 		          		cond = ele.data('condition');
 		          		if(cond == 'HighGluc') {
-		          			return 'green';
+		          			return '#24B556';
 		          		}
 		          		else if(cond == 'LowGluc') {
-		          			return 'red';
+		          			return '#E63946';
 		          		}
 		          		else if(cond == 'Galactose.plusLys') {
-		          			return 'cyan';
+		          			return '#073B4C';
 		          		}
 		          		else if(cond == 'Galactose.minusLys') {
-		          			return 'blue';
+		          			return '#FFD166';
+		          		}
+		          		else if(cond == 'Gal') {
+		          			return '#3DA5D9';
 		          		}
 		          		return 'black';
 		          	}

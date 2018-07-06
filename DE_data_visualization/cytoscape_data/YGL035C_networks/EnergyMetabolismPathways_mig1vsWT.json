@@ -39,7 +39,7 @@
      "edges": [
           {
                "data": {
-                    "lfc": 1.7797901096369524, 
+                    "lfc": 1.7797901096369526, 
                     "direct": null, 
                     "id": "YGL035CYFR053CHighGluc", 
                     "condition": "HighGluc", 
@@ -55,7 +55,7 @@
           }, 
           {
                "data": {
-                    "lfc": 1.48737783185553, 
+                    "lfc": 1.4873778318555302, 
                     "direct": null, 
                     "id": "YGL035CYKL148CHighGluc", 
                     "condition": "HighGluc", 
@@ -87,7 +87,7 @@
           }, 
           {
                "data": {
-                    "lfc": -1.1744343478164299, 
+                    "lfc": -1.17443434781643, 
                     "direct": null, 
                     "id": "YGL035CYPL061WHighGluc", 
                     "condition": "HighGluc", 

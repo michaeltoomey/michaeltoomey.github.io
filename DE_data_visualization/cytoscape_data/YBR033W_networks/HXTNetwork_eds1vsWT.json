@@ -2,63 +2,63 @@
      "nodes": [
           {
                "data": {
-                    "direct": "1", 
+                    "metabolism": null, 
                     "id": "YDR277C", 
                     "name": "MTH1"
                }
           }, 
           {
                "data": {
-                    "direct": "1", 
+                    "metabolism": null, 
                     "id": "YDR345C", 
                     "name": "HXT3"
                }
           }, 
           {
                "data": {
-                    "direct": "1", 
+                    "metabolism": "proRespproGrowth", 
                     "id": "YFR053C", 
                     "name": "HXK1"
                }
           }, 
           {
                "data": {
-                    "direct": "1", 
+                    "metabolism": "proGrowth", 
                     "id": "YGL035C", 
                     "name": "MIG1"
                }
           }, 
           {
                "data": {
-                    "direct": null, 
+                    "metabolism": "proGrowth", 
                     "id": "YGL253W", 
                     "name": "HXK2"
                }
           }, 
           {
                "data": {
-                    "direct": "1", 
+                    "metabolism": null, 
                     "id": "YHR092C", 
                     "name": "HXT4"
                }
           }, 
           {
                "data": {
-                    "direct": "1", 
+                    "metabolism": null, 
                     "id": "YHR096C", 
                     "name": "HXT5"
                }
           }, 
           {
                "data": {
-                    "direct": null, 
+                    "metabolism": null, 
                     "id": "YMR011W", 
                     "name": "HXT2"
                }
           }, 
           {
                "data": {
-                    "direct": "1", 
+                    "metabolism": "proGrowth", 
                     "id": "YOR047C", 
                     "name": "STD1"
                }
@@ -75,38 +75,39 @@
           {
                "data": {
                     "lfc": 1.057472849819985, 
-                    "id": "YBR033WYDR277CGalactose.plusLys", 
-                    "condition": "Galactose.plusLys", 
+                    "direct": "1", 
+                    "id": "YBR033WYDR277CGal", 
+                    "condition": "Gal", 
                     "interaction": "represses", 
                     "target": "YDR277C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "PlusLys", 
+                    "lysInMedia": "PlusLysNoLys", 
                     "lit": 0, 
                     "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": null
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
                     "lfc": 1.37735020157289, 
-                    "id": "YBR033WYDR345CGalactose.minusLys", 
-                    "condition": "Galactose.minusLys", 
+                    "direct": "1", 
+                    "id": "YBR033WYDR345CGal", 
+                    "condition": "Gal", 
                     "interaction": "represses", 
                     "target": "YDR345C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "NoLys", 
+                    "lysInMedia": "PlusLysNoLys", 
                     "lit": 0, 
                     "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": null
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
                     "lfc": -1.10390901603564, 
+                    "direct": "1", 
                     "id": "YBR033WYFR053CHighGluc", 
                     "condition": "HighGluc", 
                     "interaction": "activates", 
@@ -116,13 +117,13 @@
                     "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YBR033W", 
-                    "mediaSugar": "Glucose", 
-                    "metabolism": "proRespproGrowth"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
                     "lfc": -1.581897195978595, 
+                    "direct": "1", 
                     "id": "YBR033WYFR053CLowGluc", 
                     "condition": "LowGluc", 
                     "interaction": "activates", 
@@ -132,29 +133,13 @@
                     "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YBR033W", 
-                    "mediaSugar": "Glucose", 
-                    "metabolism": "proRespproGrowth"
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": 1.5578789121675198, 
-                    "id": "YBR033WYGL035CGalactose.minusLys", 
-                    "condition": "Galactose.minusLys", 
-                    "interaction": "represses", 
-                    "target": "YGL035C", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "NoLys", 
-                    "lit": 0, 
-                    "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": "proGrowth"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
                     "lfc": -1.1009383932715449, 
+                    "direct": "1", 
                     "id": "YBR033WYGL035CLowGluc", 
                     "condition": "LowGluc", 
                     "interaction": "activates", 
@@ -164,77 +149,45 @@
                     "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YBR033W", 
-                    "mediaSugar": "Glucose", 
-                    "metabolism": "proGrowth"
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 3.3511901557945003, 
-                    "id": "YBR033WYGL253WGalactose.minusLys", 
-                    "condition": "Galactose.minusLys", 
+                    "lfc": 1.5578789121675198, 
+                    "direct": "1", 
+                    "id": "YBR033WYGL035CGal", 
+                    "condition": "Gal", 
+                    "interaction": "represses", 
+                    "target": "YGL035C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "PlusLysNoLys", 
+                    "lit": 0, 
+                    "source": "YBR033W", 
+                    "mediaSugar": "Galactose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 2.657602158170995, 
+                    "direct": null, 
+                    "id": "YBR033WYGL253WGal", 
+                    "condition": "Gal", 
                     "interaction": "represses", 
                     "target": "YGL253W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "NoLys", 
+                    "lysInMedia": "PlusLysNoLys", 
                     "lit": 0, 
                     "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": "proGrowth"
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": 1.96401416054749, 
-                    "id": "YBR033WYGL253WGalactose.plusLys", 
-                    "condition": "Galactose.plusLys", 
-                    "interaction": "represses", 
-                    "target": "YGL253W", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "PlusLys", 
-                    "lit": 0, 
-                    "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": "proGrowth"
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": 2.5807970221638254, 
-                    "id": "YBR033WYHR092CGalactose.minusLys", 
-                    "condition": "Galactose.minusLys", 
-                    "interaction": "represses", 
-                    "target": "YHR092C", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "NoLys", 
-                    "lit": 0, 
-                    "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": null
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": 2.7921470050105803, 
-                    "id": "YBR033WYHR092CGalactose.plusLys", 
-                    "condition": "Galactose.plusLys", 
-                    "interaction": "represses", 
-                    "target": "YHR092C", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "PlusLys", 
-                    "lit": 0, 
-                    "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": null
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
                     "lfc": -1.31635149711278, 
+                    "direct": "1", 
                     "id": "YBR033WYHR092CHighGluc", 
                     "condition": "HighGluc", 
                     "interaction": "activates", 
@@ -244,77 +197,45 @@
                     "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YBR033W", 
-                    "mediaSugar": "Glucose", 
-                    "metabolism": null
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": -1.322218789487735, 
-                    "id": "YBR033WYHR096CGalactose.minusLys", 
-                    "condition": "Galactose.minusLys", 
+                    "lfc": 2.6864720135872027, 
+                    "direct": "1", 
+                    "id": "YBR033WYHR092CGal", 
+                    "condition": "Gal", 
+                    "interaction": "represses", 
+                    "target": "YHR092C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "PlusLysNoLys", 
+                    "lit": 0, 
+                    "source": "YBR033W", 
+                    "mediaSugar": "Galactose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.5025274934041248, 
+                    "direct": "1", 
+                    "id": "YBR033WYHR096CGal", 
+                    "condition": "Gal", 
                     "interaction": "activates", 
                     "target": "YHR096C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "NoLys", 
+                    "lysInMedia": "PlusLysNoLys", 
                     "lit": 0, 
                     "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": null
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": -1.6828361973205148, 
-                    "id": "YBR033WYHR096CGalactose.plusLys", 
-                    "condition": "Galactose.plusLys", 
-                    "interaction": "activates", 
-                    "target": "YHR096C", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "PlusLys", 
-                    "lit": 0, 
-                    "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": null
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": 3.5931138095876602, 
-                    "id": "YBR033WYMR011WGalactose.minusLys", 
-                    "condition": "Galactose.minusLys", 
-                    "interaction": "represses", 
-                    "target": "YMR011W", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "NoLys", 
-                    "lit": 0, 
-                    "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": null
-               }
-          }, 
-          {
-               "data": {
-                    "lfc": 1.2674855724770901, 
-                    "id": "YBR033WYMR011WGalactose.plusLys", 
-                    "condition": "Galactose.plusLys", 
-                    "interaction": "represses", 
-                    "target": "YMR011W", 
-                    "notes": null, 
-                    "manual": 0, 
-                    "lysInMedia": "PlusLys", 
-                    "lit": 0, 
-                    "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": null
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
                     "lfc": 1.230719470537025, 
+                    "direct": null, 
                     "id": "YBR033WYMR011WHighGluc", 
                     "condition": "HighGluc", 
                     "interaction": "represses", 
@@ -324,40 +245,39 @@
                     "lysInMedia": "NoLys", 
                     "lit": 0, 
                     "source": "YBR033W", 
-                    "mediaSugar": "Glucose", 
-                    "metabolism": null
+                    "mediaSugar": "Glucose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.34300880307517, 
-                    "id": "YBR033WYOR047CGalactose.minusLys", 
-                    "condition": "Galactose.minusLys", 
+                    "lfc": 2.430299691032375, 
+                    "direct": null, 
+                    "id": "YBR033WYMR011WGal", 
+                    "condition": "Gal", 
                     "interaction": "represses", 
-                    "target": "YOR047C", 
+                    "target": "YMR011W", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "NoLys", 
+                    "lysInMedia": "PlusLysNoLys", 
                     "lit": 0, 
                     "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": "proGrowth"
+                    "mediaSugar": "Galactose"
                }
           }, 
           {
                "data": {
-                    "lfc": 1.10684235879856, 
-                    "id": "YBR033WYOR047CGalactose.plusLys", 
-                    "condition": "Galactose.plusLys", 
+                    "lfc": 1.224925580936865, 
+                    "direct": "1", 
+                    "id": "YBR033WYOR047CGal", 
+                    "condition": "Gal", 
                     "interaction": "represses", 
                     "target": "YOR047C", 
                     "notes": null, 
                     "manual": 0, 
-                    "lysInMedia": "PlusLys", 
+                    "lysInMedia": "PlusLysNoLys", 
                     "lit": 0, 
                     "source": "YBR033W", 
-                    "mediaSugar": "Galactose", 
-                    "metabolism": "proGrowth"
+                    "mediaSugar": "Galactose"
                }
           }
      ]

@@ -228,7 +228,7 @@
           }, 
           {
                "data": {
-                    "lfc": 1.46315369310241, 
+                    "lfc": 1.4631536931024098, 
                     "direct": null, 
                     "id": "YGL209WYGL180WHighGluc", 
                     "condition": "HighGluc", 
@@ -276,7 +276,7 @@
           }, 
           {
                "data": {
-                    "lfc": 1.48125038529705, 
+                    "lfc": 1.4812503852970502, 
                     "direct": null, 
                     "id": "YGL209WYHR071WLowGluc", 
                     "condition": "LowGluc", 

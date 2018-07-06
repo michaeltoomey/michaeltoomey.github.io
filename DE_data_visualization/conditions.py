@@ -1,16 +1,16 @@
-import sys, os, json
+import sys, os, json, utils
 import pandas as pd
 import numpy as np
 import processdedata as proc
 
 class ConditionContainer():
 
-	def __init__(self, condition_metadata, set_op='union', saved_data_file='', node_data_to_append='data_files/cytoscape_info_nodes.json', edge_data_to_append='data_files/cytoscape_info_edges.json', target_pval=0.05, target_lfc=2.0, direction='abs'):
+	def __init__(self, condition_metadata, orfs, set_op='union', saved_data_file='', node_data=None, edge_data=None, target_pval=0.05, target_lfc=2.0, direction='abs'):
 		self.condition_metadata = condition_metadata
 		self.conditions = [condition['name'] for condition in condition_metadata]
-		self.orfs = self.buildVerifiedORFsDict()
-		self.info_to_append_nodes = self.buildInfoToAppendDict(node_data_to_append)
-		self.info_to_append_edges = self.buildInfoToAppendDict(edge_data_to_append)
+		self.orfs = orfs
+		self.node_data_dict = utils.buildInfoToAppendDict(node_data) if node_data else None
+		self.edge_data_dict = utils.buildInfoToAppendDict(edge_data) if edge_data else None
 		self.pval = {'edgeR': 'FDR', 'DESeq2': 'padj'}
 		self.lfc = {'edgeR': 'logFC', 'DESeq2': 'log2FoldChange'}
 
@@ -102,18 +102,19 @@ class ConditionContainer():
 				else:
 					gene_name = self.orfs[index] if index in self.orfs.keys() else index
 					node_data = {'data': {'id': index, 'name': gene_name}}
-					for key in self.info_to_append_nodes.keys():
-							for subcategory in self.info_to_append_nodes[key].keys():
-								if gene_name in self.info_to_append_nodes[key][subcategory]:
-									if key in node_data['data'].keys():
-										if node_data['data'][key] == None:
-											node_data['data'][key] = subcategory
+					if self.node_data_dict:
+						for key in self.node_data_dict.keys():
+								for subcategory in self.node_data_dict[key].keys():
+									if gene_name in self.node_data_dict[key][subcategory]:
+										if key in node_data['data'].keys():
+											if node_data['data'][key] == None:
+												node_data['data'][key] = subcategory
+											else:
+												node_data['data'][key] += subcategory
 										else:
-											node_data['data'][key] += subcategory
+											node_data['data'][key] = subcategory
 									else:
-										node_data['data'][key] = subcategory
-								else:
-									node_data['data'][key] = None
+										node_data['data'][key] = None
 
 					for cond in self.de_data.columns.values:
 						lys = ''
@@ -136,20 +137,23 @@ class ConditionContainer():
 													'notes': None
 												}
 										}
+							if self.edge_data_dict:
 
-							for key in self.info_to_append_edges.keys():
-								for subcategory in self.info_to_append_edges[key].keys():
-									g = self.orfs[gene_name] if gene_name in self.orfs.keys() else gene_name
-									if g in self.info_to_append_edges[key][subcategory]:
-										if key in edge_data['data'].keys():
-											if edge_data['data'][key] == None:
-												edge_data['data'][key] = subcategory
+								for key in self.edge_data_dict.keys():
+									for subcategory in self.edge_data_dict[key].keys():
+										
+										if (gene_name in self.edge_data_dict[key][subcategory] or index in self.edge_data_dict[key][subcategory]):
+											if gene_name == 'CNS1':
+												print 'SHAKA WHEN THE WALLS FELL'
+											if key in edge_data['data'].keys():
+												if edge_data['data'][key] == None:
+													edge_data['data'][key] = subcategory
+												else:
+													edge_data['data'][key] += subcategory
 											else:
-												edge_data['data'][key] += subcategory
+												edge_data['data'][key] = subcategory
 										else:
-											edge_data['data'][key] = subcategory
-									else:
-										edge_data['data'][key] = None
+											edge_data['data'][key] = None
 
 							data['edges'] += [edge_data]
 							counter += 1
