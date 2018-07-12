@@ -1,0 +1,36 @@
+{
+     "nodes": [
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YPR006C", 
+                    "name": "ICL2"
+               }
+          }, 
+          {
+               "data": {
+                    "id": "YGL209W.YGL035C", 
+                    "name": "MIG2MIG1", 
+                    "metabolism": null
+               }
+          }
+     ], 
+     "edges": [
+          {
+               "data": {
+                    "lfc": 1.18726777587284, 
+                    "direct": null, 
+                    "id": "YGL209W.YGL035CYPR006CHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "represses", 
+                    "target": "YPR006C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YGL209W.YGL035C", 
+                    "mediaSugar": "Glucose"
+               }
+          }
+     ]
+}

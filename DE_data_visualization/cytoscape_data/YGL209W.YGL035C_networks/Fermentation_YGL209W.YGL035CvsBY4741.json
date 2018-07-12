@@ -1,0 +1,36 @@
+{
+     "nodes": [
+          {
+               "data": {
+                    "metabolism": "proGrowth", 
+                    "id": "YOL086C", 
+                    "name": "ADH1"
+               }
+          }, 
+          {
+               "data": {
+                    "id": "YGL209W.YGL035C", 
+                    "name": "MIG2MIG1", 
+                    "metabolism": null
+               }
+          }
+     ], 
+     "edges": [
+          {
+               "data": {
+                    "lfc": -1.1778298468257076, 
+                    "direct": null, 
+                    "id": "YGL209W.YGL035CYOL086CHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "activates", 
+                    "target": "YOL086C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YGL209W.YGL035C", 
+                    "mediaSugar": "Glucose"
+               }
+          }
+     ]
+}

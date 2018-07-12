@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8'></meta>
-    <title>Eds1 Networks</title>
+    <title>Networks</title>
 
     <style>
         #container {
@@ -19,7 +19,12 @@
             left: 15px;
         }
 
-        .dropbtn {
+        .options {
+            position: relative;
+            display: inline-block;
+        }
+
+        .reset {
             background-color: #4CAF50;
             text-align: left;
             color: black;
@@ -27,51 +32,67 @@
             font-size: 16px;
             border-style: solid;
             border-color: white;
-            border-width: 3px;
+            border-width: 1px;
             border-radius: 8px;
         }
 
-        .dropbtn:hover {
-            border-width: 3px;
+        .reset:hover {
+            border-width: 1px;
             border-style: solid;
             border-color: black;
         }
 
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
+        .dropdown-contentLeft {
             display: block;
             position: absolute;
-            background-color: #f1f1f1;
             min-width: 300px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
-            padding: 10px;
+            padding: 10px 0;
         }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-        }
-
-        /*.dropdown-content a:hover {background-color: #ddd;}*/
-        .dropdown-content {background-color: #ddd;}
-        /*.dropdown:hover .dropdown-content {display: block;}*/
-
-        /*.dropdown:hover .dropbtn {background-color: #3e8e41;}*/
 
         .checkHeader {
-            font-size: 15px
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: black;
         }
 
-        .checkBox {
-            font-size: 12px
+        .active, .checkHeader:hover {
+            background-color: #555;
         }
 
-        .show {display: block;}
+        .contentHidden {
+            display: none;
+        }
+
+        .contentShown {
+            padding: 0 18px;
+            display: block;
+            background-color: #f1f1f1;
+            font-family: Arial;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+        .dropdown-contentRight {
+            top: 0px;
+            right: 0px;
+            display: block;
+            position: absolute;
+            min-width: 300px;
+            z-index: 1;
+            padding: 10px 0;
+        }
 
         .tooltip {
             text-decoration:none;
@@ -98,12 +119,14 @@
 <body>
 
     <div id='container'>
-        <div class='dropdown'>
-            <button class='dropbtn' onclick="resetView()">
+        <div class='options'>
+            <button class='reset' onclick="resetView()">
                 Reset View
             </button>
-            <div class='dropdown-content' id='checkboxes'></div>
+            <div class='dropdown-contentLeft' id='checkboxes'></div>
         </div>
+
+        <div class='dropdown-contentRight' id='options'></div>
 
         <div id='cy'></div>
     </div>

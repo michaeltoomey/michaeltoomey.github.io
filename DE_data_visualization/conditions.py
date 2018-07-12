@@ -90,14 +90,14 @@ class ConditionContainer():
 		self.conditions_lys.pop(condition)
 		self.de_data = self.de_data.drop(condition, axis=1)
 
-	def writeToCytoscapeDataObj(self, sourceGene, gene_list, file_name):
+	def writeToCytoscapeDataObj(self, sourceGeneSystematic, sourceGeneCommon, gene_list, file_name):
 		data = {}
 		data['nodes'] = []
 		data['edges'] = []
 		counter = 1
 		for index, row in self.de_data.iterrows():
 			if index in gene_list:
-				if index == sourceGene:
+				if index == sourceGeneSystematic:
 					continue
 				else:
 					gene_name = self.orfs[index] if index in self.orfs.keys() else index
@@ -125,8 +125,8 @@ class ConditionContainer():
 								sugar = cond_meta['vars']['sugar']
 						if not pd.isna(row[cond]):
 							interaction = 'represses' if row[cond] > 0 else 'activates'
-							edge_data = {'data': {'id': sourceGene + index + cond,
-													'source': sourceGene, 'target': index,
+							edge_data = {'data': {'id': sourceGeneSystematic + index + cond,
+													'source': sourceGeneSystematic, 'target': index,
 													'interaction': interaction,
 													'lysInMedia': lys,
 													'mediaSugar': sugar,
@@ -141,7 +141,8 @@ class ConditionContainer():
 
 								for key in self.edge_data_dict.keys():
 									for subcategory in self.edge_data_dict[key].keys():
-										
+										if gene_name == 'CNS1':
+											print 'SHAKA WHEN THE WALLS FELL'
 										if (gene_name in self.edge_data_dict[key][subcategory] or index in self.edge_data_dict[key][subcategory]):
 											if gene_name == 'CNS1':
 												print 'SHAKA WHEN THE WALLS FELL'
@@ -159,7 +160,7 @@ class ConditionContainer():
 							counter += 1
 					data['nodes'] += [node_data]
 
-		data['nodes'] += [{'data': {'id': sourceGene, 'metabolism': None, 'name': self.orfs[sourceGene]}}]
+		data['nodes'] += [{'data': {'id': sourceGeneSystematic, 'metabolism': None, 'name': sourceGeneCommon}}]
 
 		with open(file_name, 'w') as f:
 			json.dump(data, f, indent=5)

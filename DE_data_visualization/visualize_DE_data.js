@@ -1,14 +1,45 @@
 var files = [];
+var conditions_to_use = [];
 
 function parseFileMetadata(fileName) {
 	$.getJSON(fileName, function(data) {
 		for(var genotype in data) {
-			$('#checkboxes').append('<h2 class=\'checkHeader\' id=\'' + genotype + '\'>' + genotype + '</h2>')
-			for(var networkName in data[genotype]) {
-				$('#' + genotype).append('<br><input class=\'checkBox\' type=\'checkbox\' onchange=\'updateNetworks(this)\' value=\'' + data[genotype][networkName] + '\'>' + networkName + '</input>')
+			var genotype_formatted = genotype;
+			$('#checkboxes').append('<button class=\'checkHeader\' onclick=toggleExpand(' + genotype_formatted + ')>' + genotype + '</button>');
+			$('#checkboxes').append('<div class=\'contentHidden\' id=\'' + genotype_formatted + '\'></div>');
+			for(var networkName in data[genotype]['files']) {
+				$('#' + genotype_formatted).append('<br><label><input type=\'checkbox\' class=\'checkBox\' onchange=\'updateNetworks(this)\' value=\'' + data[genotype]['files'][networkName] + '\'>' + networkName + '</label>');
+			}
+			$('#' + genotype_formatted).append('<br><br>');
+
+			for(var cond in data[genotype]['conds']) {
+				conditions_to_use.push(data[genotype]['conds'][cond]['name']);
 			}
 		}
+
+		conditions_to_use = removeDuplicates(conditions_to_use);
+		$('#options').append('<button class=\'checkHeader\' onclick=toggleExpand(conditions)>Conditions To Display</button>');
+		$('#options').append('<div class=\'contentHidden\' id=\'conditions\'></div>');
+		for(var cond in conditions_to_use){
+			$('#conditions').append('<br><label><input type=\'checkbox\' class=\'checkBox\' onchange=\'updateEdges(this)\' value=\'' + conditions_to_use[cond] + '\' checked>' + conditions_to_use[cond] + '</label>');
+		}
+		$('#conditions').append('<br><br>');
 	});
+}
+
+function removeDuplicates(arr) {
+	let unique_array = Array.from(new Set(arr));
+	return unique_array;
+}
+
+function toggleExpand(genotype) {
+	var d = document.getElementById(genotype.id);
+	if(d.className === 'contentHidden'){
+		d.className = 'contentShown';
+	}
+	else{
+		d.className = 'contentHidden';
+	}
 }
 
 function updateNetworks(checkbox) {
@@ -18,8 +49,17 @@ function updateNetworks(checkbox) {
 	else if(files.includes(checkbox.value)) {
 		files.splice(files.indexOf(checkbox.value), 1);
 	}
+	loadDifferentialExpressionNetwork();
+}
 
-	loadDifferentialExpressionNetwork(files);
+function updateEdges(checkbox){
+	if(checkbox.checked) {
+		conditions_to_use.push(checkbox.value);
+	}
+	else if(conditions_to_use.includes(checkbox.value)) {
+		conditions_to_use.splice(conditions_to_use.indexOf(checkbox.value), 1);
+	}
+	loadDifferentialExpressionNetwork();
 }
 
 function combineNetworks(networkArray) {
@@ -36,12 +76,12 @@ function combineNetworks(networkArray) {
 }
 
 function resetView() {
-	loadDifferentialExpressionNetwork(files);
+	loadDifferentialExpressionNetwork();
 }
 
-function loadDifferentialExpressionNetwork(fileNames) {
+function loadDifferentialExpressionNetwork() {
 	var data = [];
-	for(var fileName of fileNames) {
+	for(var fileName of files) {
 		$.ajax({
 			dataType: 'json',
 			url: fileName,
@@ -77,13 +117,7 @@ function loadDifferentialExpressionNetwork(fileNames) {
 							}
 							else return 'white';
 						},
-						'border-color': function(ele) {
-							metab = ele.data('metabolism');
-							if(metab == 'proRespproGrowth') {
-								return '#FFFF3A';
-							}
-							else return 'black';
-						},
+						'border-color': function(ele) {return (ele.data('metabolism') === 'proRespproGrowth') ? '#FFFF3A' : 'black';},
 					'width': '75px',
 					'height': '75px',
 				}
@@ -92,59 +126,12 @@ function loadDifferentialExpressionNetwork(fileNames) {
 				selector: 'edge',
 				style: {
 					'curve-style': 'bezier',
-		          	'width': function(ele) {
-		          		size = Math.abs(Math.round(ele.data('lfc') * 3));
-		          		size = Math.max(size, 1);
-		          		size = Math.min(size, 12);
-		          		return size + 'px';
-		          	},
-		          	'line-color': function(ele){
-		          		cond = ele.data('condition');
-		          		if(cond == 'HighGluc') {
-		          			return '#24B556';
-		          		}
-		          		else if(cond == 'LowGluc') {
-		          			return '#E63946';
-		          		}
-		          		else if(cond == 'Galactose.plusLys') {
-		          			return '#073B4C';
-		          		}
-		          		else if(cond == 'Galactose.minusLys') {
-		          			return '#FFD166';
-		          		}
-		          		else if(cond == 'Gal') {
-		          			return '#3DA5D9';
-		          		}
-		          		return 'black';
-		          	},
-		          	'line-style': function(ele) {
-		          		if(ele.data('direct') == "1") {
-		          			return 'solid';
-		          		}
-		          		else return 'dashed';
-		          	},
-		          	'target-arrow-shape': function(ele) {
-		          		return (ele.data('lfc') < 0 ? 'triangle' : 'tee');
-		          	},
-		          	'target-arrow-color': function(ele){
-		          		cond = ele.data('condition');
-		          		if(cond == 'HighGluc') {
-		          			return '#24B556';
-		          		}
-		          		else if(cond == 'LowGluc') {
-		          			return '#E63946';
-		          		}
-		          		else if(cond == 'Galactose.plusLys') {
-		          			return '#073B4C';
-		          		}
-		          		else if(cond == 'Galactose.minusLys') {
-		          			return '#FFD166';
-		          		}
-		          		else if(cond == 'Gal') {
-		          			return '#3DA5D9';
-		          		}
-		          		return 'black';
-		          	}
+		          	'width': function(ele) {return Math.min(Math.max(Math.abs(Math.round(ele.data('lfc') * 3)), 1), 12) + 'px';},
+		          	'line-color': function(ele) {return edgeColorFunction(ele.data('condition'))},
+		          	'line-style': function(ele) {return (ele.data('direct') === "1") ? 'solid' : 'dashed';},
+		          	'target-arrow-shape': function(ele) {return (ele.data('lfc') < 0 ? 'triangle' : 'tee');},
+		          	'target-arrow-color': function(ele) {return edgeColorFunction(ele.data('condition'))},
+		          	'opacity': function(ele) {return conditions_to_use.includes(ele.data('condition')) ? 1 : 0;}
 				}
 			}
 		],
@@ -206,3 +193,23 @@ function loadDifferentialExpressionNetwork(fileNames) {
 
 	cy.fit();
 }
+
+function edgeColorFunction(cond){
+	if(cond == 'HighGluc') {
+		return '#24B556';
+	}
+	else if(cond == 'LowGluc') {
+		return '#E63946';
+	}
+	else if(cond == 'Galactose.plusLys') {
+		return '#073B4C';
+	}
+	else if(cond == 'Galactose.minusLys') {
+		return '#FFD166';
+	}
+	else if(cond == 'Gal') {
+		return '#3DA5D9';
+	}
+	return 'black';
+}
+
