@@ -51,6 +51,8 @@ function initialize(fileName) {
 				$('#select_layout').append('<option value=\'' + key + '\'>' + key + '</option>');
 		}
 		$('#lay').append('<br><br>');
+
+		console.log(files);
 	});
 }
 
