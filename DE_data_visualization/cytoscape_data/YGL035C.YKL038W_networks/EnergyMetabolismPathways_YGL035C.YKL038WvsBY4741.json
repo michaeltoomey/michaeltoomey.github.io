@@ -1,0 +1,59 @@
+{
+     "nodes": [
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YCR005C", 
+                    "name": "CIT2"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YKL148C", 
+                    "name": "SDH1"
+               }
+          }, 
+          {
+               "data": {
+                    "id": "YGL035C.YKL038W", 
+                    "name": "MIG1RGT1", 
+                    "metabolism": null
+               }
+          }
+     ], 
+     "edges": [
+          {
+               "data": {
+                    "lfc": 1.5759854240962825, 
+                    "direct": null, 
+                    "id": "YGL035C.YKL038WYCR005CHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "represses", 
+                    "target": "YCR005C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YGL035C.YKL038W", 
+                    "mediaSugar": "Glucose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": 1.76239296579885, 
+                    "direct": null, 
+                    "id": "YGL035C.YKL038WYKL148CHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "represses", 
+                    "target": "YKL148C", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YGL035C.YKL038W", 
+                    "mediaSugar": "Glucose"
+               }
+          }
+     ]
+}

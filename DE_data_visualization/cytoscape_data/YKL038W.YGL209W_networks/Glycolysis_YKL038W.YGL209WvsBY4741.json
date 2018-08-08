@@ -1,0 +1,59 @@
+{
+     "nodes": [
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YAL038W", 
+                    "name": "CDC19"
+               }
+          }, 
+          {
+               "data": {
+                    "metabolism": "proGrowth", 
+                    "id": "YGL253W", 
+                    "name": "HXK2"
+               }
+          }, 
+          {
+               "data": {
+                    "id": "YKL038W.YGL209W", 
+                    "name": "RGT1MIG2", 
+                    "metabolism": null
+               }
+          }
+     ], 
+     "edges": [
+          {
+               "data": {
+                    "lfc": 1.11946287606724, 
+                    "direct": null, 
+                    "id": "YKL038W.YGL209WYAL038WLowGluc", 
+                    "condition": "LowGluc", 
+                    "interaction": "represses", 
+                    "target": "YAL038W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YKL038W.YGL209W", 
+                    "mediaSugar": "Glucose"
+               }
+          }, 
+          {
+               "data": {
+                    "lfc": -1.410337777361255, 
+                    "direct": null, 
+                    "id": "YKL038W.YGL209WYGL253WHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "activates", 
+                    "target": "YGL253W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YKL038W.YGL209W", 
+                    "mediaSugar": "Glucose"
+               }
+          }
+     ]
+}

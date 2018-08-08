@@ -1,0 +1,35 @@
+{
+     "nodes": [
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YBR033W", 
+                    "name": "EDS1"
+               }
+          }, 
+          {
+               "data": {
+                    "id": "YDR477W", 
+                    "name": "SNF1", 
+                    "metabolism": null
+               }
+          }
+     ], 
+     "edges": [
+          {
+               "data": {
+                    "lfc": 1.586569070082294, 
+                    "id": "YDR477WYBR033WHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "represses", 
+                    "target": "YBR033W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YDR477W", 
+                    "mediaSugar": "Glucose"
+               }
+          }
+     ]
+}

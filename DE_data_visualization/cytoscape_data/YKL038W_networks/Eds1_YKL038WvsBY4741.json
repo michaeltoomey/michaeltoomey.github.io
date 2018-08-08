@@ -1,0 +1,36 @@
+{
+     "nodes": [
+          {
+               "data": {
+                    "metabolism": null, 
+                    "id": "YBR033W", 
+                    "name": "EDS1"
+               }
+          }, 
+          {
+               "data": {
+                    "id": "YKL038W", 
+                    "name": "RGT1", 
+                    "metabolism": null
+               }
+          }
+     ], 
+     "edges": [
+          {
+               "data": {
+                    "lfc": 1.0643075093528798, 
+                    "direct": null, 
+                    "id": "YKL038WYBR033WHighGluc", 
+                    "condition": "HighGluc", 
+                    "interaction": "represses", 
+                    "target": "YBR033W", 
+                    "notes": null, 
+                    "manual": 0, 
+                    "lysInMedia": "NoLys", 
+                    "lit": 0, 
+                    "source": "YKL038W", 
+                    "mediaSugar": "Glucose"
+               }
+          }
+     ]
+}

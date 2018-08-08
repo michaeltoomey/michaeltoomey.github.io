@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8'></meta>
-    <title>Networks</title>
+    <title>Differential Expression Networks</title>
 
     <style>
         #container {
@@ -24,7 +24,7 @@
             display: inline-block;
         }
 
-        .reset {
+        .btn {
             background-color: #4CAF50;
             text-align: left;
             color: black;
@@ -36,7 +36,7 @@
             border-radius: 8px;
         }
 
-        .reset:hover {
+        .btn:hover {
             border-width: 1px;
             border-style: solid;
             border-color: black;
@@ -49,6 +49,17 @@
             z-index: 1;
             padding: 10px 0;
         }
+
+        .dropdown-contentRight {
+            top: 0px;
+            right: 0px;
+            display: block;
+            position: absolute;
+            min-width: 300px;
+            z-index: 1;
+            padding: 10px 0;
+        }
+
 
         .checkHeader {
             background-color: #777;
@@ -84,16 +95,6 @@
             cursor: pointer;
         }
 
-        .dropdown-contentRight {
-            top: 0px;
-            right: 0px;
-            display: block;
-            position: absolute;
-            min-width: 300px;
-            z-index: 1;
-            padding: 10px 0;
-        }
-
         .tooltip {
             text-decoration:none;
             position:relative;
@@ -117,12 +118,21 @@
     <script src='visualize_DE_data.js'></script>
 </head>
 <body>
-
     <div id='container'>
         <div class='options'>
-            <button class='reset' onclick="resetView()">
+            <button class='btn' onclick="resetView()">
                 Reset View
             </button>
+            <a id='downloadImage'>
+                <button class='btn' onclick="downloadImage()">
+                    Download Image
+                </button>
+            </a>
+            <a id='downloadList'>
+                <button class='btn' onclick="downloadGeneFile()">
+                    Download Gene List
+                </button>
+            </a>
             <div class='dropdown-contentLeft' id='checkboxes'></div>
         </div>
 
@@ -131,8 +141,9 @@
         <div id='cy'></div>
     </div>
 
+
 </body>
 <script type="text/javascript">
-    parseFileMetadata('cytoscape_data/file_metadata.json');
+    initialize('cytoscape_data/file_metadata.json');
 </script>
 </html>

@@ -17,6 +17,6 @@ class callingCardsDataProcesser():
 		self.bindingSites = pd.read_csv(filename, sep='\t', header=None, names=[i for i in range(0, 12)])
 		self.bindingSites = self.bindingSites.sort_values(7, ascending=True)
 
-	def createGeneListFile(self, filename='data_files/top_cc_matches.json'):
+	def createGeneListFile(self, filename):
 		sites_to_write = self.bindingSites[self.bindingSites[7] <= 0.001]
-		sites_to_write.to_csv(filename, columns=[1], header=False, index=False)
+		sites_to_write.to_csv(filename, columns=[1], sep='\t', header=False, index=False)

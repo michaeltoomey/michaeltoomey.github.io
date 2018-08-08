@@ -1,7 +1,21 @@
 var files = [];
 var conditions_to_use = [];
+png64 = '';
+var cy;
+var layout;
+var layoutOptions = {'Circle': {
+								'name': 'circle',
+								'avoidOverlap': true,
+								'equidistant': true,
+								},
+			 		 'Concentric': {
+			 						'name': 'concentric',
+			 						'minNodeSpacing': 50,
+			 						'equidistant': true
+			 					}
+					};
 
-function parseFileMetadata(fileName) {
+function initialize(fileName) {
 	$.getJSON(fileName, function(data) {
 		for(var genotype in data) {
 			var genotype_formatted = genotype;
@@ -24,6 +38,19 @@ function parseFileMetadata(fileName) {
 			$('#conditions').append('<br><label><input type=\'checkbox\' class=\'checkBox\' onchange=\'updateEdges(this)\' value=\'' + conditions_to_use[cond] + '\' checked>' + conditions_to_use[cond] + '</label>');
 		}
 		$('#conditions').append('<br><br>');
+
+		$('#options').append('<button class=\'checkHeader\' onclick=toggleExpand(lay)>Layout</button>');
+		$('#options').append('<div class=\'contentHidden\' id=\'lay\'></div>');
+		$('#lay').append('<select id=\'select_layout\' onchange=updateLayout(this)>');
+		for(var key in layoutOptions) {
+			if(key === 'Circle') {
+				$('#select_layout').append('<option value=\'' + key + '\' selected=\'selected\'>' + key + '</option>');
+				layout = layoutOptions['Circle'];
+			}
+			else 
+				$('#select_layout').append('<option value=\'' + key + '\'>' + key + '</option>');
+		}
+		$('#lay').append('<br><br>');
 	});
 }
 
@@ -32,14 +59,19 @@ function removeDuplicates(arr) {
 	return unique_array;
 }
 
-function toggleExpand(genotype) {
-	var d = document.getElementById(genotype.id);
+function toggleExpand(elem) {
+	var d = document.getElementById(elem.id);
 	if(d.className === 'contentHidden'){
 		d.className = 'contentShown';
 	}
 	else{
 		d.className = 'contentHidden';
 	}
+}
+
+function updateLayout(elem) {
+	layout = layoutOptions[elem.options[elem.selectedIndex].value];
+	graphAndFormatNetworks();
 }
 
 function updateNetworks(checkbox) {
@@ -49,7 +81,7 @@ function updateNetworks(checkbox) {
 	else if(files.includes(checkbox.value)) {
 		files.splice(files.indexOf(checkbox.value), 1);
 	}
-	loadDifferentialExpressionNetwork();
+	graphAndFormatNetworks();
 }
 
 function updateEdges(checkbox){
@@ -59,7 +91,7 @@ function updateEdges(checkbox){
 	else if(conditions_to_use.includes(checkbox.value)) {
 		conditions_to_use.splice(conditions_to_use.indexOf(checkbox.value), 1);
 	}
-	loadDifferentialExpressionNetwork();
+	graphAndFormatNetworks();
 }
 
 function combineNetworks(networkArray) {
@@ -76,10 +108,60 @@ function combineNetworks(networkArray) {
 }
 
 function resetView() {
-	loadDifferentialExpressionNetwork();
+	graphAndFormatNetworks();
 }
 
-function loadDifferentialExpressionNetwork() {
+function downloadImage() {
+	png64 = cy.png({full: true, scale: 2});
+	if(png64 === 'data:,') {
+		alert('Image too large!');
+		download.href = null;
+	}
+	else {
+		var download = document.getElementById('downloadImage');
+		download.href = png64;
+		download.download = 'network.png';
+	}
+}
+
+function downloadGeneFile() {
+	nodes = cy.nodes();
+	ids = [];
+	for(var i = 0; i < nodes.length; i++) {
+		ids.push(nodes[i]['_private']['data']['id']);
+	}
+
+	var csvContent = "data:text/csv;charset=utf-8,";
+	ids.forEach(function(item){
+   		csvContent += item + "\n";
+	}); 
+
+	var encodedUri = encodeURI(csvContent);
+	var download = document.getElementById('downloadList');
+	download.href = csvContent;
+	download.download = 'gene_list.csv'
+}
+
+function edgeColorFunction(cond){
+	if(cond == 'HighGluc') {
+		return '#24B556';
+	}
+	else if(cond == 'LowGluc') {
+		return '#E63946';
+	}
+	else if(cond == 'Galactose.plusLys') {
+		return '#073B4C';
+	}
+	else if(cond == 'Galactose.minusLys') {
+		return '#FFD166';
+	}
+	else if(cond == 'Gal') {
+		return '#3DA5D9';
+	}
+	return 'black';
+}
+ 
+function graphAndFormatNetworks() {
 	var data = [];
 	for(var fileName of files) {
 		$.ajax({
@@ -92,7 +174,7 @@ function loadDifferentialExpressionNetwork() {
 		});
 	}
 	
-	var cy = cytoscape({
+	cy = cytoscape({
 		container: document.getElementById('cy'),
 		elements: combineNetworks(data),
 		style: [
@@ -118,8 +200,8 @@ function loadDifferentialExpressionNetwork() {
 							else return 'white';
 						},
 						'border-color': function(ele) {return (ele.data('metabolism') === 'proRespproGrowth') ? '#FFFF3A' : 'black';},
-					'width': '75px',
-					'height': '75px',
+					'width': '74px',
+					'height': '74px',
 				}
 			},
 			{
@@ -131,16 +213,12 @@ function loadDifferentialExpressionNetwork() {
 		          	'line-style': function(ele) {return (ele.data('direct') === "1") ? 'solid' : 'dashed';},
 		          	'target-arrow-shape': function(ele) {return (ele.data('lfc') < 0 ? 'triangle' : 'tee');},
 		          	'target-arrow-color': function(ele) {return edgeColorFunction(ele.data('condition'))},
-		          	'opacity': function(ele) {return conditions_to_use.includes(ele.data('condition')) ? 1 : 0;}
+		          	'opacity': function(ele) {return conditions_to_use.includes(ele.data('condition')) ? 1 : 0;},
+		          	'control-point-step-size': 50
 				}
 			}
 		],
-		layout: {
-			'name': 'circle',
-			'fit': false,
-			'avoidOverlap': true,
-			'avoidOverlapPadding': 20
-		}
+		layout: layout
 	});
 
 	cy.on('mouseover', 'node', function(event) {
@@ -193,23 +271,3 @@ function loadDifferentialExpressionNetwork() {
 
 	cy.fit();
 }
-
-function edgeColorFunction(cond){
-	if(cond == 'HighGluc') {
-		return '#24B556';
-	}
-	else if(cond == 'LowGluc') {
-		return '#E63946';
-	}
-	else if(cond == 'Galactose.plusLys') {
-		return '#073B4C';
-	}
-	else if(cond == 'Galactose.minusLys') {
-		return '#FFD166';
-	}
-	else if(cond == 'Gal') {
-		return '#3DA5D9';
-	}
-	return 'black';
-}
-

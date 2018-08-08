@@ -207,7 +207,7 @@
           {
                "data": {
                     "lfc": -2.236402056702585, 
-                    "direct": null, 
+                    "direct": "1", 
                     "id": "YBR033WYER069WHighGluc", 
                     "condition": "HighGluc", 
                     "interaction": "activates", 
