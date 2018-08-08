@@ -2,7 +2,7 @@ import sys, os, json
 
 class BuildAppendedGeneInformationFile():
 
-	def __init__(self, output_file='data_files/cytoscape_info.json'):
+	def __init__(self, output_file='../data_files/cytoscape_info.json'):
 		self.output_file = output_file
 
 	def addGeneInformationToFile(self, header, subcategories, information_files):

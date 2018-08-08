@@ -2,7 +2,7 @@ import sys, os, json
 import pandas as pd
 
 def buildVerifiedORFsDict():
-	orfs = pd.read_csv('../../Raw Data Sets/VerifiedORFs.csv', header=None, index_col=0, usecols=[1, 3])
+	orfs = pd.read_csv('../../../Raw Data Sets/VerifiedORFs.csv', header=None, index_col=0, usecols=[1, 3])
 	orfs_dict = orfs.to_dict()
 	return orfs_dict[3]
 

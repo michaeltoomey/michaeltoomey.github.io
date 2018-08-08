@@ -7,7 +7,7 @@ class PWMDataProcessor():
 		self.bindingSites = pd.read_csv(filename, sep='\t', header=None, names=['genes', 'pvals'])
 		self.bindingSites = self.bindingSites.sort_values('pvals', ascending=True)
 
-	def createGeneListFile(self, filename='data_files/top_pwm_matches.json'):
+	def createGeneListFile(self, filename='../data_files/top_pwm_matches.json'):
 		self.bindingSites[:50].to_csv(filename, columns=['genes'], header=False, index=False)
 
 
