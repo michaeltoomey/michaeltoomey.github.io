@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<meta charset=utf-8>
+<html>
+<head>
+<style>
+    p {
+        font-size: 20px;
+    } 
+
+    h2 {
+        font-size: 30px;
+    } 
+
+    #lawstooltip {   
+    position: absolute;           
+    text-align: left;           
+    width: 250px;
+    height: 150px;                 
+    padding: 2px;             
+    font: 12px sans-serif;        
+    background: white;   
+    border: 0px;      
+    overflow: auto;  
+    }
+
+    .lawstooltiphidden {   
+        position: absolute;           
+        text-align: left;           
+        width: 250px;
+        height: 150px;                 
+        padding: 2px;             
+        font: 12px sans-serif;        
+        background: white;   
+        border: 0px;      
+        overflow: auto;   
+        display: none;
+    }
+
+    .deathstooltip {   
+        position: absolute;           
+        text-align: left;           
+        width: 215px;
+        height: 40px;                 
+        padding: 2px;             
+        font: 12px sans-serif;        
+        background: white;   
+        border: 0px;      
+    }
+
+    .gunstooltip {   
+        position: absolute;           
+        text-align: left;           
+        width: 175px;
+        height: 40px;                 
+        padding: 2px;             
+        font: 12px sans-serif;        
+        background: white;   
+        border: 0px;      
+    }
+
+    .button {
+        border-radius: 25px;
+    }
+</style>
+</head>
+<body>
+    <a>
+        <div id="chart"></div>
+        <div style='text-align: left;'><strong>Click on an individual state in the "Number of Gun Laws" chart for more information about the laws in that state. Click on the buttons underneath the "Number of Gun Laws" to see how different states compare in each sub-category of gun laws.</strong></div>
+    </a>
+</body>
+<script type="text/javascript" src="https://d3js.org/d3.v3.js"></script>
+<script type="text/javascript" src="https://d3js.org/queue.v1.min.js"></script>
+<script type="text/javascript" src="gunSafetyVisualization.js"></script>
+</html>

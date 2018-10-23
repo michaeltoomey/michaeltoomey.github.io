@@ -1,40 +1,250 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE HTML>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
-<head>
-
+	<title>Mike Toomey</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	
+	<!-- Font -->
+	
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
+	
+	<!-- Stylesheets -->
+	
+	<link href="common-css/bootstrap.css" rel="stylesheet">
+	
+	<link href="common-css/ionicons.css" rel="stylesheet">
+	
+	<link href="common-css/fluidbox.min.css" rel="stylesheet">
+	
+	<link href="css/styles.css" rel="stylesheet">
+	
+	<link href="css/responsive.css" rel="stylesheet">
+	
+</head>
 <body>
+	
+	<section class="intro-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1 col-lg-2"></div>
+				<div class="col-md-10 col-lg-8">
+					<div class="intro">
+						<div class="profile-img"><img src="images/profile_pic.png" alt=""></div>
+						<h2><b>Mike Toomey</b></h2>
+						<h7><b>Computational Biology Research Assistant</b></h7>
+                        <h5><b>B.S. Computer Science</b></h5>
+						<ul class="social-icons">
+							<li class="contact-tooltip">
+                                <a href="https://michaeltoomey.github.io/contact-form">&#9993;</a>
+                                <span class="tooltiptext">Contact</span>
+                            </li>
+                            <li class="contact-tooltip">
+                                <a href="https://www.linkedin.com/in/mike-toomey-82902ba5/"><i class="ion-social-linkedin"></i></a>
+                                <span class="tooltiptext">LinkedIn</span>
+                            </li>
+                            <li class="contact-tooltip">
+                                <a href="https://github.com/michaeltoomey"><i class="ion-social-github"></i></a>
+                                <span class="tooltiptext">GitHub</span>
+                            </li>
+						</ul>
+					</div><!-- intro -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- intro-section -->
+	
+	<section class="about-section section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>About me</b></h3>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+					<p class="margin-b-50">I'm a recent graduate of Washington University in St. Louis, where I studied computer science and 
+                        biology. My primary academic interests are in genomics and computational biology and for the last couple years I've 
+                        been working at the WashU Center for Genome Sciences and Systems Biology in <a href="http://mblab.wustl.edu/index.html"><u>Michael Brent's lab</u></a>. As a member of the lab, I work on pipelines for analyzing RNA-Seq data and look for novel genetic interactions 
+                        in yeast.
+                    </p>
+					
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- about-section -->
 
-    <h1>Michael Toomey</h1>
-    <h4>johntoomey(at)wustl.edu</h4>
-        <div>
-            <a href="#" class="w3-bar-item w3-button w3-light-gray">Home</a>
-            <a href="parallelCoordinates.html" class="w3-bar-item w3-button w3-light-gray">Parallel Coordinates</a>
-            <a href="books.html" class="w3-bar-item w3-button w3-light-gray">Books</a>
-            <a href="cityscapes.html" class="w3-bar-item w3-button w3-light-gray">Cityscapes</a>
+    <section class="skills-section section">
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="heading">
+                    <h3><b>Skills</b></h3>
+                </div>
+            </div><!-- col-sm-4 -->
+            <div class="col-sm-8">
+                <div class="row">
+
+                    <div class="col-xs-3 col-sm-6 col-md-6 col-lg-3">
+                        <div class="circle">
+                            <h6 class="circle-text">Python</h6>
+                        </div>
+                    </div><!-- col-sm-6-->
+                
+                    <div class="col-xs-3 col-sm-6 col-md-6 col-lg-3">
+                        <div class="circle">
+                            <h6 class="circle-text">Java</h6>
+                        </div>
+                    </div><!-- col-sm-6-->
+                    
+                    <div class="col-xs-3 col-sm-6 col-md-6 col-lg-3">
+                        <div class="circle">
+                            <h6 class="circle-text">R</h6>
+                        </div>                        
+                    </div><!-- col-sm-6-->
+                    
+                    <div class="col-xs-3 col-sm-6 col-md-6 col-lg-3">
+                        <div class="circle">
+                            <h6 class="circle-text">C++</h6>
+                        </div>                  
+                    </div><!-- col-sm-6-->
+
+                </div><!-- row -->
+            </div>
         </div>
-    
-    <div id="container">
-        <img src="website_image.JPG" alt = "headshot" style="float: right; width:20%;"/>
-        <p>
-            I am a student at Washington University in St. Louis studying computer science and biology. My primary academic interests are in genomics and computational biology. 
-            Currently, I work at the Center for Genome Sciences and Systems Biology for <a href="http://mblab.wustl.edu/index.html">Dr. Michael Brent</a>, 
-            a Professor of Computer Science, Genetics, and Biomedical Engineering at WashU. 
-            As a member of the Brent Lab, I build pipelines for analysis of RNA-Seq data, and look for novel genetic interactions in yeast.
-            <br>
-            <br>
-            When I have long weekends, or more than a few days off, I enjoy exploring cities. Check out <a href="cityscapes.html">Cityscapes</a> for some
-            fun places to visit!
-            <br>
-            <br>
-            I don't get as much opportunity as I'd like, but I love reading. I just finished <i>White Teeth</i> by Zadie Smith, am currently on 
-            <i>Giovanni's Room</i> by James Baldwin, and have Kazuo Ishiguro's <i>Never Let Me Go</i> next on the list. Click <a href="books.html">here</a> 
-            to find reviews of some books I recently read.
-        </p>
-    </div>
+    </section>
 
+    <section class="portfolio-section section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="heading">
+                        <h3><b>Previous Work</b></h3>
+                    </div>
+                </div><!-- col-sm-4 -->
+            </div><!-- row -->
+        </div><!-- container -->
+        
+        <div class="portfolioContainer">
+
+        	<div class="p-item web-design">
+            	<a href="https://washuvis.github.io/stlschools/" onclick="window.open('https://washuvis.github.io/stlschools/')">
+            		<div class="name">
+            			<h3>St. Louis Public School Visualizer</h3>
+            		</div>
+            		<img src="images/school_vis.png" alt="">
+            	</a>
+            </div> <!-- p-item -->
+
+            <div class="p-item web-design">
+            	<a href="https://michaeltoomey.github.io/DE_data_visualization/" onclick="window.open('https://michaeltoomey.github.io/DE_data_visualization/')"><img src="images/rnaseq_vis.png" alt=""></a>
+            </div> <!-- p-item -->
+
+            <div class="p-item web-design">
+            	<a href="https://michaeltoomey.github.io/electoral_map/" onclick="window.open('https://michaeltoomey.github.io/electoral_map/')"><img src="images/electoral_map.png" alt=""></a>
+            </div> <!-- p-item -->
+
+            <div class="p-item web-design">
+            	<a href="https://michaeltoomey.github.io/gun_laws/" onclick="window.open('https://michaeltoomey.github.io/gun_laws/')"><img src="images/gun_laws.png" alt=""></a>
+            </div> <!-- p-item -->
+
+        </div>
+        
+    </section><!-- portfolio-section -->
+	
+	<section class="experience-section section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Experience</b></h3>
+						<!-- <h6 class="font-lite-black"><b>PREVIOUS JOBS</b></h6> -->
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+				
+					<div class="experience margin-b-50">
+						<h4><b>RESEARCH ASSISTANT</b></h4>
+						<h5 class="font-yellow"><b>COMPUTATIONAL BIOLOGY GROUP</b></h5>
+						<h6 class="margin-t-10">MAY 2016 - PRESENT</h6>
+						<ul class="list margin-b-30">
+							<li>Implement expression analysis pipelines in R, Python, Slurm, and bash for analyzing raw RNA-seq data.</li>
+							<li>Create visualizations to search for biologically interesting genetic interactions.</li>
+							<li>Integrate numerous data sources to build support for hypotheses about gene networks.</li>
+                            <li>Perform data quality control using methods such as principal components analysis, regression, etc.</li>
+                            <li>Write and maintain code for analyzing cellular metabolic fluxes.</li>
+						</ul>
+					</div><!-- experience -->
+					
+					<div class="experience margin-b-50">
+						<h4><b>STUDENT RESEARCHER</b></h4>
+						<h5 class="font-yellow"><b>CHROMATIN AND GENOME STRUCTURE GROUP</b></h5>
+						<h6 class="margin-t-10">JANUARY 2017 - MAY 2017</h6>
+						<ul class="list margin-b-30">
+							<li>Combined biological knowledge and computational tools to discover gene-coding regions and regulatory elements in fly genomes.</li>
+							<li>Analyzed Next-Gen sequencing data for assembling fly genomes utilizing by integrating data from two sequencing techniques.</li>
+							<li>Wrote about methods and findings in scientific report to be used by others as model for similar work and publication.</li>
+						</ul>
+					</div><!-- experience -->
+					
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+		
+	</section><!-- experience-section -->
+	
+	<section class="education-section section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Education</b></h3>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+					<div class="education-wrapper">
+						<div class="education margin-b-50">
+							<h4><b>B.S. IN COMPUTER SCIENCE</b> WITH MINOR IN BIOINFORMATICS</h4>
+							<h5 class="font-yellow"><b>WASHINGTON UNIVERSITY IN ST. LOUIS</b></h5>
+							<h6 class="font-lite-black margin-t-10">GRADUATED MAY 2018</h6>
+						</div><!-- education -->
+					</div><!-- education-wrapper -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+		
+	</section><!-- about-section -->
+	
+	<footer>
+		<p class="copyright">
+			<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+		</p>
+
+
+	</footer>
+	
+	
+	<!-- SCIPTS -->
+	
+	<script src="common-js/jquery-3.2.1.min.js"></script>
+	
+	<script src="common-js/tether.min.js"></script>
+	
+	<script src="common-js/bootstrap.js"></script>
+	
+	<script src="common-js/isotope.pkgd.min.js"></script>
+	
+	<script src="common-js/jquery.waypoints.min.js"></script>
+	
+	<script src="common-js/progressbar.min.js"></script>
+	
+	<script src="common-js/jquery.fluidbox.min.js"></script>
+	
+	<script src="common-js/scripts.js"></script>
+	
 </body>
-
 </html>

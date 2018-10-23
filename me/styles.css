@@ -2,18 +2,27 @@ body {
 	background-color: white;
 	font-family: Calibri;
 }
+
 h1 {
 	color: dimgray;
-	text-align: center;
+	text-align: left;
 }
+
+h2 {
+	color: dimgray;
+	text-align: left;
+}
+
 h4 {
 	color: dimgray;
 	text-align: center;
 }
+
 img {
 	max-width: 100%;
 	max-height: 100%;
 }
+
 p {
 	color: dimgray;
 	text-align: left;
@@ -31,3 +40,4 @@ p {
     right: 5%;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
